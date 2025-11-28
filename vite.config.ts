@@ -7,5 +7,6 @@ export default defineConfig({
 	plugins: [react(), tailwindcss()],
 	server: {
 		host: '0.0.0.0' // or host: true for all addresses
-	}
+	},
+	base: '/portfolio/',
 });
