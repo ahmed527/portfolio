@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import {
 	Menu, X, Linkedin, Mail, Phone, MapPin,
-	ExternalLink, ChevronRight, Code, Database,
-	Cloud, Layout, Server, Terminal, Moon, Sun,
+	ChevronRight, Database,
+	Cloud, Layout, Server, Moon, Sun,
 	Award, Briefcase, GraduationCap, Download,
-	Globe, Cpu, Shield, Zap, CheckCircle2, Layers
+	Globe, Shield, Zap, CheckCircle2, Layers
 } from 'lucide-react';
 
 const App = () => {
@@ -271,8 +271,8 @@ const App = () => {
 										key={link.name}
 										href={link.href}
 										className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${activeSection === link.href.substring(1)
-												? 'text-blue-400'
-												: (darkMode ? 'text-slate-300 hover:text-white' : 'text-slate-600 hover:text-slate-900')
+											? 'text-blue-400'
+											: (darkMode ? 'text-slate-300 hover:text-white' : 'text-slate-600 hover:text-slate-900')
 											}`}
 									>
 										{link.name}
@@ -314,8 +314,8 @@ const App = () => {
 									href={link.href}
 									onClick={() => setIsMenuOpen(false)}
 									className={`block px-3 py-2 rounded-md text-base font-medium ${activeSection === link.href.substring(1)
-											? 'text-blue-400 bg-blue-400/10'
-											: (darkMode ? 'text-slate-300 hover:text-white' : 'text-slate-600 hover:text-slate-900')
+										? 'text-blue-400 bg-blue-400/10'
+										: (darkMode ? 'text-slate-300 hover:text-white' : 'text-slate-600 hover:text-slate-900')
 										}`}
 								>
 									{link.name}
