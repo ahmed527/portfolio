@@ -96,7 +96,7 @@ const App = () => {
 			type: "Full-time",
 			description: "Leading development for PennDOT's Medicaid and MATP administration systems.",
 			achievements: [
-				"Design and develop secure, scalable web apps using .NET Core and Angular.",
+				"Develop secure, scalable web apps using .NET Core and Angular.",
 				"Optimizing high-volume SQL Server and Azure SQL transactions.",
 				"Implementing event-driven architectures with Azure Functions and Queues.",
 				"Ensuring WCAG 2.1 AA accessibility and state privacy compliance."
