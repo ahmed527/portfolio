@@ -424,8 +424,8 @@ const App = () => {
 								<div className="text-[10px] uppercase text-slate-500">Experience</div>
 							</div>
 							<div className="text-center">
-								<div className="text-2xl font-bold text-teal-400">15+</div>
-								<div className="text-[10px] uppercase text-slate-500">Projects</div>
+								<div className="text-2xl font-bold text-teal-400">6+</div>
+								<div className="text-[10px] uppercase text-slate-500">Projects (USA)</div>
 							</div>
 							<div className="text-center">
 								<div className="text-2xl font-bold text-purple-400">4.0</div>
