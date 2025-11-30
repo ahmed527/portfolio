@@ -287,6 +287,7 @@ const App = () => {
 	const projects = [
 		{
 			title: "MATP Administration System",
+			fullName: "Medical Assistance Transportation Program",
 			client: "PennDOT - State of Pennsylvania",
 			icon: <Shield className="w-6 h-6 text-teal-400" />,
 			tech: [".NET Core", "Angular", "Azure", "SQL"],
@@ -297,6 +298,7 @@ const App = () => {
 		},
 		{
 			title: "eCIS Modernization",
+			fullName: "Electronic Client Information System",
 			client: "DHS - State of Pennsylvania",
 			icon: <Server className="w-6 h-6 text-blue-400" />,
 			tech: [".NET", "Oracle", "SSRS Reports", "Batches"],
@@ -307,6 +309,7 @@ const App = () => {
 		},
 		{
 			title: "NG911 Emergency Response",
+			fullName: "Next Generation 9-1-1",
 			client: "PennDOT - State of Pennsylvania",
 			icon: <Zap className="w-6 h-6 text-red-400" />,
 			tech: ["React", ".NET Web API", "Real-time Data", "Azure DevOps"],
@@ -317,6 +320,7 @@ const App = () => {
 		},
 		{
 			title: "Compass Modernization",
+			fullName: "Commonwealth of Pennsylvania Application for Social Services",
 			client: "DHS - State of Pennsylvania",
 			icon: <Globe className="w-6 h-6 text-purple-400" />,
 			tech: ["Web API", "Azure DevOps", "Oracle", "SSRS Reports", "Batches"],
@@ -327,6 +331,7 @@ const App = () => {
 		},
 		{
 			title: "WIC Nutrition Program",
+			fullName: "Special Supplemental Nutrition Program for Women, Infants, and Children",
 			client: "DHS - State of Wisconsin",
 			icon: <Layers className="w-6 h-6 text-orange-400" />,
 			tech: [".NET Web API", "JavaScript", "SQL Server"],
@@ -339,6 +344,7 @@ const App = () => {
 		},
 		{
 			title: "WCAIS",
+			fullName: "Workers' Compensation Automation and Integration System",
 			client: "L&I - State of Pennsylvania",
 			icon: <Layout className="w-6 h-6 text-indigo-400" />,
 			tech: [".NET Web API", "PWA", "UI Components", "Vue", "TFS"],
@@ -460,8 +466,7 @@ const App = () => {
 								href="https://e.pcloud.link/publink/show?code=XZWPuQZePPygjnxSESI5VDJOjBjT8Ycisik"
 								target="_blank"
 								rel="noreferrer"
-								className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all border ${darkMode ? 'border-slate-700 hover:bg-slate-800' : 'border-slate-200 hover:bg-slate-100'}`}
-							>
+								className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all border ${darkMode ? 'border-slate-700 hover:bg-slate-800' : 'border-slate-200 hover:bg-slate-100'}`}>
 								<Download size={20} /> Resume
 							</a>
 						</div>
@@ -645,7 +650,7 @@ const App = () => {
 								<div key={index} className={`group relative rounded-2xl overflow-hidden border transition-all duration-300 hover:shadow-2xl ${darkMode ? 'bg-slate-800 border-slate-700' : 'bg-white border-slate-200'}`}>
 									<div className={`h-2 w-full bg-gradient-to-r ${index % 2 === 0 ? 'from-blue-500 to-teal-500' : 'from-purple-500 to-pink-500'}`}></div>
 									<div className="p-8 flex flex-col h-full">
-										<div className="flex justify-between items-start mb-4">
+										<div className="flex justify-between items-start mb-2">
 											<div className="flex items-center gap-3">
 												<div className={`p-2 rounded-lg ${darkMode ? 'bg-slate-900' : 'bg-slate-100'}`}>
 													{project.icon}
@@ -653,6 +658,12 @@ const App = () => {
 												<h3 className="text-2xl font-bold group-hover:text-blue-400 transition-colors">{project.title}</h3>
 											</div>
 										</div>
+
+										{/* Full Name Display */}
+										<div className={`text-sm font-medium mb-4 leading-snug ${darkMode ? 'text-slate-400' : 'text-slate-500'}`}>
+											{project.fullName}
+										</div>
+
 										<div className="mb-6">
 											<span className={`text-xs font-bold tracking-wider uppercase px-2 py-1 rounded ${darkMode ? 'bg-slate-700 text-slate-300' : 'bg-slate-100 text-slate-600'}`}>
 												{project.client}
