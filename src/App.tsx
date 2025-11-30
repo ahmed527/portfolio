@@ -165,7 +165,7 @@ const App = () => {
 			achievements: [
 				"Design and develop secure, scalable web applications using .NET Core and Angular.",
 				"Optimize SQL Server and Azure SQL databases through query tuning and indexing.",
-				"Implement RESTful APIs and event-driven architectures with Azure Functions.",
+				"Implement RESTful APIs and event-driven architectures with Azure Functions, and leverage Azure key vault.",
 				"Ensure WCAG 2.1 AA accessibility and compliance with state privacy regulations."
 			]
 		},
@@ -292,8 +292,8 @@ const App = () => {
 			icon: <Shield className="w-6 h-6 text-teal-400" />,
 			tech: [".NET Core", "Angular", "Azure", "SQL"],
 			details: [
-				"A high-scale administration system ensuring accessibility (WCAG 2.1 AA) and secure data exchange for Medicaid transport.",
-				"Streamlined development via CI/CD and Docker, delivering consistent, secure releases."
+				"Developed and optimized .NET Core and Angular applications for PennDOT’s Medicaid and MATP administration systems, ensuring high scalability, accessibility (WCAG 2.1 AA) and secure data exchange.",
+				"Implemented security standards by integrating the application with SiteMinder using OpenID Connect and OAuth 2.0 with PKCE, enforcing strict access control policies.Streamlined development via CI/CD and Docker, delivering consistent, secure releases."
 			]
 		},
 		{
@@ -303,8 +303,10 @@ const App = () => {
 			icon: <Server className="w-6 h-6 text-blue-400" />,
 			tech: [".NET", "Oracle", "SSRS Reports", "Batches"],
 			details: [
-				"Complete modernization of legacy systems to a robust microservices architecture, improving maintainability.",
-				"Significantly enhanced system performance and scalability for state-wide usage."
+				"Complete modernization of legacy systems to a robust architecture, improving maintainability.",
+				"Significantly enhanced system performance and scalability for state-wide usage.",
+				"Implemented Batches (Background jobs) to handle large data processing.",
+				"Implemented SSRS Reports for generating reports.",
 			]
 		},
 		{
@@ -314,6 +316,7 @@ const App = () => {
 			icon: <Zap className="w-6 h-6 text-red-400" />,
 			tech: ["React", ".NET Web API", "Real-time Data", "Azure DevOps"],
 			details: [
+				"Built the full-stack application, developing secure .NET Web APIs for backend services and a responsive React frontend for the user interface.",
 				"Real-time processing system for emergency dispatch services, ensuring critical data accuracy.",
 				"Greatly improved response times for critical emergency queries."
 			]
@@ -326,7 +329,9 @@ const App = () => {
 			tech: ["Web API", "Azure DevOps", "Oracle", "SSRS Reports", "Batches"],
 			details: [
 				"Transitioned the Compass platform to latest .NET technology with a focus on API performance and security.",
-				"Automated deployment and testing reduced release cycles and manual errors."
+				"Automated deployment and testing reduced release cycles and manual errors.",
+				"Implemented Batches (Background jobs) to handle large data processing.",
+				"Implemented SSRS Reports for generating reports.",
 			]
 		},
 		{
@@ -349,6 +354,7 @@ const App = () => {
 			icon: <Layout className="w-6 h-6 text-indigo-400" />,
 			tech: [".NET Web API", "PWA", "UI Components", "Vue", "TFS"],
 			details: [
+				"Built the full-stack application, developing secure .NET Web APIs for backend services and a responsive Vue.js frontend for the user interface.",
 				"Created reusable component libraries for commonly requested UI elements, enabling quicker future development and promoting a consistent user experience.",
 				"Integrated progressive web app (PWA) features, ensuring smooth performance across multiple devices."
 			]
