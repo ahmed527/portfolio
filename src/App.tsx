@@ -287,7 +287,7 @@ const App = () => {
 	const projects = [
 		{
 			title: "MATP Administration System",
-			client: "PennDOT - State of PA",
+			client: "PennDOT - State of Pennsylvania",
 			icon: <Shield className="w-6 h-6 text-teal-400" />,
 			tech: [".NET Core", "Angular", "Azure", "SQL"],
 			details: [
@@ -297,7 +297,7 @@ const App = () => {
 		},
 		{
 			title: "eCIS Modernization",
-			client: "DHS - State of PA",
+			client: "DHS - State of Pennsylvania",
 			icon: <Server className="w-6 h-6 text-blue-400" />,
 			tech: [".NET", "Oracle", "SSRS Reports", "Batches"],
 			details: [
@@ -307,7 +307,7 @@ const App = () => {
 		},
 		{
 			title: "NG911 Emergency Response",
-			client: "PennDOT - State of PA",
+			client: "PennDOT - State of Pennsylvania",
 			icon: <Zap className="w-6 h-6 text-red-400" />,
 			tech: ["React", ".NET Web API", "Real-time Data", "Azure DevOps"],
 			details: [
@@ -317,7 +317,7 @@ const App = () => {
 		},
 		{
 			title: "Compass Modernization",
-			client: "DHS - State of PA",
+			client: "DHS - State of Pennsylvania",
 			icon: <Globe className="w-6 h-6 text-purple-400" />,
 			tech: ["Web API", "Azure DevOps", "Oracle", "SSRS Reports", "Batches"],
 			details: [
@@ -327,7 +327,7 @@ const App = () => {
 		},
 		{
 			title: "WIC Nutrition Program",
-			client: "State of Wisconsin",
+			client: "DHS - State of Wisconsin",
 			icon: <Layers className="w-6 h-6 text-orange-400" />,
 			tech: [".NET Web API", "JavaScript", "SQL Server"],
 			details: [
@@ -339,7 +339,7 @@ const App = () => {
 		},
 		{
 			title: "WCAIS",
-			client: "State of Pennsylvania",
+			client: "L&I - State of Pennsylvania",
 			icon: <Layout className="w-6 h-6 text-indigo-400" />,
 			tech: [".NET Web API", "PWA", "UI Components", "Vue", "TFS"],
 			details: [
