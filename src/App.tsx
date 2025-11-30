@@ -35,19 +35,25 @@ const App = () => {
 		window.addEventListener('scroll', handleScroll);
 
 		// Experience Calculation
-		// Start Date anchored to April 2017 to result in 8y 7m as of Nov 2025
-		const startDate = new Date('2017-04-01');
+		// Logic: To have 8 years 6 months in Nov 2025, start date needs to be May 2017.
+		const startDate = new Date('2017-05-01');
 		const now = new Date();
 
 		let years = now.getFullYear() - startDate.getFullYear();
 		let months = now.getMonth() - startDate.getMonth();
 
+		// Adjust for negative month difference
 		if (months < 0) {
 			years -= 1;
 			months += 12;
 		}
 
-		setExperienceString(`${years}y ${months}m`);
+		// Format string: Hide months if 0
+		if (months === 0) {
+			setExperienceString(`${years}y`);
+		} else {
+			setExperienceString(`${years}y ${months}m`);
+		}
 
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
@@ -73,7 +79,7 @@ const App = () => {
 		{
 			category: "Front-End Development",
 			icon: <Layout className="w-6 h-6" />,
-			items: ["React", "Angular", "Vue.js", "TypeScript", "JavaScript", "HTML5/CSS3", "Tailwind CSS"]
+			items: ["Angular", "React", "Vue.js", "TypeScript", "JavaScript", "HTML5/CSS3", "Bootstrap"]
 		},
 		{
 			category: "Cloud & DevOps",
@@ -89,100 +95,131 @@ const App = () => {
 
 	const experience = [
 		{
-			company: "Collasys LLC",
+			company: "Collasys LLC, State of Pennsylvania",
 			role: "Senior Full Stack .NET Engineer",
-			period: "Oct 2025 - Present",
+			period: "Oct 2025 – Present",
 			location: "PA",
 			countryCode: "us",
-			type: "Full-time",
-			description: "Developing for PennDOT's Medicaid and MATP administration systems.",
+			type: "Contract",
+			description: "PennDOT's Medicaid and MATP administration systems.",
 			achievements: [
-				"Develop secure, scalable web apps using .NET Core and Angular.",
-				"Optimizing high-volume SQL Server and Azure SQL transactions.",
-				"Implementing event-driven architectures with Azure Functions and Queues.",
-				"Ensuring WCAG 2.1 AA accessibility and state privacy compliance."
+				"Design and develop secure, scalable web applications using .NET Core and Angular.",
+				"Optimize SQL Server and Azure SQL databases through query tuning and indexing.",
+				"Implement RESTful APIs and event-driven architectures with Azure Functions.",
+				"Ensure WCAG 2.1 AA accessibility and compliance with state privacy regulations."
 			]
 		},
 		{
-			company: "Sigma Resources (Deloitte)",
+			company: "Sigma Resources, (Contractor for Deloitte)",
 			role: "Senior Full Stack .NET Engineer",
-			period: "Nov 2022 - Oct 2025",
+			period: "Nov 2022 – Oct 2025",
 			location: "PA",
 			countryCode: "us",
 			type: "Contract",
-			description: "Modernized critical eCIS projects for the State of Pennsylvania.",
+			description: "eCIS Modernization for the State of Pennsylvania.",
 			achievements: [
-				"Transitioned legacy systems to microservices architecture.",
-				"Spearheaded API development integrating .NET Web API with Oracle/MSSQL.",
-				"Optimized eCIS module for faster high-volume transaction processing.",
-				"Collaborated on scalable cloud security best practices."
+				"Modernized eCIS projects implementing microservices architecture.",
+				"Spearheaded API development integrating .NET Web API with Oracle and MSSQL.",
+				"Optimized application architecture, significantly enhancing response times.",
+				"Supported CI/CD pipeline implementation in Azure DevOps."
 			]
 		},
 		{
-			company: "Collabrium Systems (CAI)",
+			company: "Collabrium Systems, (Contractor for CAI)",
 			role: ".NET Developer",
-			period: "May 2022 - Jul 2022",
+			period: "May 2022 – Jul 2022",
 			location: "PA",
 			countryCode: "us",
 			type: "Contract",
-			description: "Critical component design for NG911 emergency response system.",
+			description: "NG911 Emergency Response System.",
 			achievements: [
-				"Built real-time data processing solutions using React and .NET.",
-				"Enhanced emergency dispatch efficiency and reduced response times.",
-				"Fine-tuned full-stack application performance."
+				"Designed key software components ensuring real-time data accuracy.",
+				"Modernized real-time data processing solutions using React, .NET Web API and SQL.",
+				"Fine-tuned performance for front-end and back-end applications."
 			]
 		},
 		{
-			company: "Sigma Resources (State of WI)",
+			company: "Sigma Resources, State of Wisconsin",
 			role: ".NET Developer",
-			period: "Jan 2020 - May 2022",
+			period: "Jan 2022 – May 2022",
 			location: "PA",
 			countryCode: "us",
 			type: "Contract",
-			description: "Maintained WIC Nutrition Program software solutions.",
+			description: "WIC (Women, Infants and Children) Nutrition Program.",
 			achievements: [
-				"Developed secure .NET Web APIs for real-time eligibility checks.",
-				"Optimized complex SQL queries to reduce database response times.",
-				"Automated nightly benefit processing and validation jobs."
+				"Developed and maintained software solutions using ASP.NET and JavaScript.",
+				"Designed secure backend solutions to support high-traffic user interactions.",
+				"Optimized SQL queries to improve database efficiency and reduce response times.",
+				"Automated nightly benefit processing and data validation."
 			]
 		},
 		{
-			company: "Jackson State University",
+			company: "Sigma Resources, (Contractor for Deloitte)",
+			role: ".NET Developer",
+			period: "Nov 2020 – Jan 2022",
+			location: "PA",
+			countryCode: "us",
+			type: "Contract",
+			description: "WCAIS (Workers' Compensation Automation and Integration System).",
+			achievements: [
+				"Developed .NET Web APIs to streamline data processing.",
+				"Built Vue.js based UI components improving responsiveness.",
+				"Collaborated on seamless integration of statewide regulatory compliance features."
+			]
+		},
+		{
+			company: "Sigma Resources, (Contractor for Deloitte)",
+			role: ".NET Developer",
+			period: "Apr 2020 – Jul 2020",
+			location: "PA",
+			countryCode: "us",
+			type: "Contract",
+			description: "Compass Project API Implementation.",
+			achievements: [
+				"Implemented new API features integrating .NET Web API with Oracle databases.",
+				"Developed custom authentication middleware to meet security requirements.",
+				"Built key features to automate claims processing."
+			]
+		},
+		{
+			company: "Jackson State University Innovation Center",
 			role: "Software Developer",
-			period: "Aug 2019 - Apr 2020",
+			period: "Aug 2019 – Apr 2020",
 			location: "MS",
 			countryCode: "us",
 			type: "Employee",
-			description: "Led development of university registration web applications.",
+			description: "University Registration & Management Applications.",
 			achievements: [
-				"Built management apps using .NET MVC Core and Flutter.",
-				"Mentored junior developers on full-stack best practices."
+				"Led development of web-based registration apps using .NET MVC Core and Flutter.",
+				"Provided mentorship to junior developers on full-stack practices."
 			]
 		},
 		{
-			company: "The Cohen International Group",
+			company: "The Cohen International Group (TCIG)",
 			role: "Software Engineer",
-			period: "Jun 2018 - Jul 2019",
+			period: "Jun 2018 – Jul 2019",
 			location: "Bahrain",
 			countryCode: "bh",
 			type: "Employee",
-			description: "Full-stack development for travel solution platforms.",
+			description: "Travel Solutions Platform.",
 			achievements: [
-				"Leveraged Angular, React, and RabbitMQ for scalable solutions.",
-				"Integrated third-party RESTful APIs for data synchronization."
+				"Developed applications using .NET, Angular, React, and RabbitMQ.",
+				"Implemented RESTful APIs and integrated third-party services.",
+				"Optimized backend services enhancing scalability."
 			]
 		},
 		{
 			company: "Reliance Technology",
 			role: "Software Engineer",
-			period: "Feb 2017 - May 2018",
+			period: "Feb 2017 – May 2018",
 			location: "Sudan",
 			countryCode: "sd",
 			type: "Employee",
-			description: "Enterprise application development for banking sectors.",
+			description: "Banking & Enterprise Applications.",
 			achievements: [
 				"Built Electronic Cheque Clearing (ECC) and ERP platforms.",
-				"Managed full SDLC from requirements to deployment."
+				"Managed full SDLC from requirement gathering to deployment.",
+				"Designed secure backend architectures for enterprise apps."
 			]
 		}
 	];
@@ -378,7 +415,7 @@ const App = () => {
 				<div className="flex-1 w-full max-w-lg relative group">
 					<div className={`absolute inset-0 bg-gradient-to-r from-blue-500 to-teal-500 rounded-2xl blur-3xl opacity-20 group-hover:opacity-30 transition-opacity duration-500`}></div>
 
-					{/* New Profile Card Visual (Not Code) */}
+					{/* New Profile Card Visual */}
 					<div className={`relative w-full aspect-square rounded-2xl border ${darkMode ? 'bg-slate-800/40 border-slate-700/50' : 'bg-white/60 border-slate-200'} backdrop-blur-xl p-8 flex flex-col justify-center gap-6 shadow-2xl`}>
 
 						{/* Header / Avatar Area */}
@@ -425,7 +462,7 @@ const App = () => {
 								<div className="text-[10px] uppercase text-slate-500">Experience</div>
 							</div>
 							<div className="text-center">
-								<div className="text-2xl font-bold text-teal-400">6+</div>
+								<div className="text-2xl font-bold text-teal-400">6</div>
 								<div className="text-[10px] uppercase text-slate-500">Projects (USA)</div>
 							</div>
 							<div className="text-center">
@@ -468,7 +505,7 @@ const App = () => {
 			</section>
 
 			{/* Experience Section */}
-			<section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+			<section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
 				<div className="mb-16">
 					<h2 className="text-3xl md:text-4xl font-bold mb-4">Professional Journey</h2>
 					<div className="w-20 h-1 bg-teal-500 rounded-full"></div>
@@ -502,16 +539,16 @@ const App = () => {
 
 								{/* Content Card */}
 								<div className={`flex-1 p-6 rounded-2xl border transition-all ${darkMode ? 'bg-slate-800/50 border-slate-700 hover:bg-slate-800' : 'bg-white border-slate-200 hover:shadow-lg'}`}>
-									<div className="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+									<div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
 										<div className="flex items-center gap-3">
 											<div className={`p-2 rounded-lg ${darkMode ? 'bg-slate-700' : 'bg-slate-100'}`}>
 												<Briefcase size={18} className="text-blue-500" />
 											</div>
 											<h3 className="text-xl font-bold">{job.role}</h3>
 										</div>
-										<span className={`text-sm font-semibold px-2 py-0.5 rounded mt-2 sm:mt-0 ${darkMode ? 'bg-teal-900/30 text-teal-400' : 'bg-teal-50 text-teal-700'}`}>
+										<div className={`text-sm font-semibold md:text-right ${darkMode ? 'text-teal-400' : 'text-teal-700'}`}>
 											{job.company}
-										</span>
+										</div>
 									</div>
 									<p className={`mb-4 italic ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>{job.description}</p>
 									<ul className="space-y-2">
@@ -557,7 +594,6 @@ const App = () => {
 										</span>
 									</div>
 
-									{/* Updated to support list of details instead of single description */}
 									<ul className="space-y-3 mb-6 flex-grow">
 										{project.details.map((detail, i) => (
 											<li key={i} className="flex items-start gap-2 text-sm leading-relaxed">
@@ -617,7 +653,6 @@ const App = () => {
 						<div className={`p-8 rounded-2xl border h-full ${darkMode ? 'bg-gradient-to-br from-slate-800 to-slate-900 border-slate-700' : 'bg-gradient-to-br from-white to-slate-50 border-slate-200'}`}>
 							<div className="space-y-6">
 
-								{/* Updated Certificate with Link */}
 								<a
 									href="https://learn.microsoft.com/en-us/users/ahmed527/credentials/1afcab418bea81f5?ref=https%3A%2F%2Fwww.linkedin.com%2F"
 									target="_blank"
