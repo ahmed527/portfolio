@@ -458,7 +458,7 @@ const App = () => {
 							<span className="text-blue-400 font-semibold"> .NET</span>,
 							<span className="text-teal-400 font-semibold"> Azure</span>, and
 							<span className="text-emerald-400 font-semibold"> Modern JavaScript</span> frameworks.
-							Specializing in microservices, cloud solutions, and high-performance architecture.
+							Specializing in microservices, cloud solutions and high-performance architecture.
 						</p>
 
 						<div className="flex flex-wrap gap-4 pt-4">
