@@ -322,16 +322,17 @@ const App = () => {
 			]
 		},
 		{
-			title: "Compass Modernization",
+			title: "Compass",
 			fullName: "Commonwealth of Pennsylvania Application for Social Services",
 			client: "DHS - State of Pennsylvania",
 			icon: <Globe className="w-6 h-6 text-purple-400" />,
 			tech: ["Web API", "Azure DevOps", "Oracle", "SSRS Reports", "Batches"],
 			details: [
-				"Transitioned the Compass platform to latest .NET technology with a focus on API performance and security.",
+				"Transitioned the Compass platform to latest .NET technology with a focus on API performance and security (Modernization)",
 				"Automated deployment and testing reduced release cycles and manual errors.",
 				"Implemented Batches (Background jobs) to handle large data processing.",
 				"Implemented SSRS Reports for generating reports.",
+				"Maintained the legacy application by adding new features as per the new requirements, beside fixing issues."
 			]
 		},
 		{
