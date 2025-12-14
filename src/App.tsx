@@ -396,6 +396,7 @@ const App = () => {
 									))}
 									<button
 										onClick={toggleTheme}
+										aria-label="Toggle theme"
 										className={`p-2 rounded-full transition-colors ${darkMode ? 'bg-slate-800 hover:bg-slate-700' : 'bg-slate-200 hover:bg-slate-300'}`}
 									>
 										{darkMode ? <Sun size={18} /> : <Moon size={18} />}
@@ -406,12 +407,14 @@ const App = () => {
 							<div className="md:hidden flex items-center gap-4">
 								<button
 									onClick={toggleTheme}
+									aria-label="Toggle theme"
 									className={`p-2 rounded-full transition-colors ${darkMode ? 'bg-slate-800' : 'bg-slate-200'}`}
 								>
 									{darkMode ? <Sun size={18} /> : <Moon size={18} />}
 								</button>
 								<button
 									onClick={() => setIsMenuOpen(!isMenuOpen)}
+									aria-label="Toggle menu"
 									className={`inline-flex items-center justify-center p-2 rounded-md ${darkMode ? 'text-slate-400 hover:text-white' : 'text-slate-600 hover:text-slate-900'}`}
 								>
 									{isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -466,13 +469,13 @@ const App = () => {
 							<a href="mailto:ahmed5_27@hotmail.com" className="flex items-center gap-2 px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-medium transition-all transform hover:-translate-y-1 shadow-lg shadow-blue-500/25">
 								<Mail size={20} /> Contact Me
 							</a>
-							<a href="https://www.linkedin.com/in/ahmed527" target="_blank" rel="noreferrer" className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all border ${darkMode ? 'border-slate-700 hover:bg-slate-800' : 'border-slate-200 hover:bg-slate-100'}`}>
+							<a href="https://www.linkedin.com/in/ahmed527" target="_blank" rel="noopener noreferrer" className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all border ${darkMode ? 'border-slate-700 hover:bg-slate-800' : 'border-slate-200 hover:bg-slate-100'}`}>
 								<Linkedin size={20} /> LinkedIn
 							</a>
 							<a
 								href="https://e.pcloud.link/publink/show?code=XZWPuQZePPygjnxSESI5VDJOjBjT8Ycisik"
 								target="_blank"
-								rel="noreferrer"
+								rel="noopener noreferrer"
 								className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all border ${darkMode ? 'border-slate-700 hover:bg-slate-800' : 'border-slate-200 hover:bg-slate-100'}`}>
 								<Download size={20} /> Resume
 							</a>
@@ -602,8 +605,11 @@ const App = () => {
 											<span>{job.location}</span>
 											<img
 												src={`https://flagcdn.com/24x18/${job.countryCode}.png`}
-												alt="Flag"
+												alt={`Flag of ${job.countryCode === 'us' ? 'United States' : job.countryCode === 'bh' ? 'Bahrain' : 'Sudan'}`}
 												className="w-5 h-auto object-contain inline-block"
+												loading="lazy"
+												width="24"
+												height="18"
 											/>
 										</div>
 										<div className={`text-xs mt-1 inline-block px-2 py-0.5 rounded ${darkMode ? 'bg-slate-800 text-slate-500' : 'bg-slate-200 text-slate-600'}`}>
