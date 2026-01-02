@@ -186,7 +186,7 @@ const App = () => {
 		},
 		{
 			company: "Collabrium Systems (Contractor for CAI)",
-			role: ".NET Developer",
+			role: "Full Stack .NET Developer",
 			period: "May 2022 – Jul 2022",
 			location: "PA",
 			countryCode: "us",
@@ -200,7 +200,7 @@ const App = () => {
 		},
 		{
 			company: "Sigma Resources, State of Wisconsin",
-			role: ".NET Developer",
+			role: "Full Stack .NET Developer",
 			period: "Jan 2022 – May 2022",
 			location: "PA",
 			countryCode: "us",
@@ -215,7 +215,7 @@ const App = () => {
 		},
 		{
 			company: "Sigma Resources, (Contractor for Deloitte)",
-			role: ".NET Developer",
+			role: "Full Stack .NET Developer",
 			period: "Nov 2020 – Jan 2022",
 			location: "PA",
 			countryCode: "us",
