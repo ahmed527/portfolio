@@ -156,12 +156,12 @@ const App = () => {
 	const experience = [
 		{
 			company: "Collasys LLC, State of Pennsylvania",
-			role: "Senior Full Stack .NET Engineer",
+			role: "Senior Full Stack .NET Developer",
 			period: "Oct 2025 – Present",
 			location: "PA",
 			countryCode: "us",
 			type: "Contract",
-			description: "PennDOT's Medicaid and MATP administration systems.",
+			description: "DHS MATP Mileage Reimbursement.",
 			achievements: [
 				"Design and develop secure, scalable web applications using .NET Core and Angular.",
 				"Optimize SQL Server (Azure SQL) databases through query tuning and indexing.",
@@ -170,8 +170,8 @@ const App = () => {
 			]
 		},
 		{
-			company: "Sigma Resources, (Contractor for Deloitte)",
-			role: "Senior Full Stack .NET Engineer",
+			company: "Sigma Resources (Contractor for Deloitte)",
+			role: "Senior Full Stack .NET Developer",
 			period: "Nov 2022 – Oct 2025",
 			location: "PA",
 			countryCode: "us",
@@ -185,7 +185,7 @@ const App = () => {
 			]
 		},
 		{
-			company: "Collabrium Systems, (Contractor for CAI)",
+			company: "Collabrium Systems (Contractor for CAI)",
 			role: ".NET Developer",
 			period: "May 2022 – Jul 2022",
 			location: "PA",
@@ -256,7 +256,7 @@ const App = () => {
 		},
 		{
 			company: "The Cohen International Group (TCIG)",
-			role: "Software Engineer",
+			role: "Full Stack Software Developer",
 			period: "Jun 2018 – Jul 2019",
 			location: "Bahrain",
 			countryCode: "bh",
@@ -270,7 +270,7 @@ const App = () => {
 		},
 		{
 			company: "Reliance Technology",
-			role: "Software Engineer",
+			role: "Full Stack Software Developer",
 			period: "Feb 2017 – May 2018",
 			location: "Sudan",
 			countryCode: "sd",
