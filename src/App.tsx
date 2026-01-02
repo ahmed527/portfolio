@@ -164,8 +164,8 @@ const App = () => {
 			description: "PennDOT's Medicaid and MATP administration systems.",
 			achievements: [
 				"Design and develop secure, scalable web applications using .NET Core and Angular.",
-				"Optimize SQL Server and Azure SQL databases through query tuning and indexing.",
-				"Implement RESTful APIs and event-driven architectures with Azure Functions, and leverage Azure key vault.",
+				"Optimize SQL Server (Azure SQL) databases through query tuning and indexing.",
+				"Implement RESTful APIs leveraging Azure services like (keyvalut, functions, storage account).",
 				"Ensure WCAG 2.1 AA accessibility and compliance with state privacy regulations."
 			]
 		},
@@ -286,13 +286,13 @@ const App = () => {
 
 	const projects = [
 		{
-			title: "MATP Administration System",
+			title: "MATP Mileage Reimbursement",
 			fullName: "Medical Assistance Transportation Program",
-			client: "PennDOT - State of Pennsylvania",
+			client: "DHS - State of Pennsylvania",
 			icon: <Shield className="w-6 h-6 text-teal-400" />,
 			tech: [".NET Core", "Angular", "Azure", "SQL"],
 			details: [
-				"Develop and optimize .NET Core and Angular applications for PennDOT’s Medicaid and MATP administration systems, ensuring high scalability, accessibility (WCAG 2.1 AA) and secure data exchange.",
+				"Develop and optimize .NET Core and Angular applications for DHS’s Medicaid and MATP administration systems, ensuring high scalability, accessibility (WCAG 2.1 AA) and secure data exchange.",
 				"Implement security standards by integrating the application with SiteMinder using OpenID Connect and OAuth 2.0 with PKCE, enforcing strict access control policies."
 			]
 		},
