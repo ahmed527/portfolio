@@ -110,9 +110,9 @@ const App = () => {
 
 		// Format string: Hide months if 0
 		if (months === 0) {
-			setExperienceString(`${years}y`);
+			setExperienceString(`${years} y`);
 		} else {
-			setExperienceString(`${years}y ${months}m`);
+			setExperienceString(`${years} y, ${months} m`);
 		}
 
 		return () => window.removeEventListener('scroll', handleScroll);
@@ -538,7 +538,7 @@ const App = () => {
 							{/* Stats Grid */}
 							<div className="grid grid-cols-3 gap-4 mt-2">
 								<div className="text-center">
-									<div className="text-xl font-bold text-blue-400 whitespace-nowrap">{experienceString}</div>
+									<div className="text-2xl font-extrabold whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-teal-400 to-emerald-400">{experienceString}</div>
 									<div className="text-[10px] uppercase text-slate-500">Experience</div>
 								</div>
 								<div className="text-center">
