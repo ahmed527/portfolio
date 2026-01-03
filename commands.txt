@@ -1,0 +1,4 @@
+back up of old commands in package.json
+
+	// "predeploy": "npm run build",
+		// "deploy": "gh-pages -d dist"
