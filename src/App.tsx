@@ -540,29 +540,59 @@ const App = () => {
 								</div>
 							</div>
 
-							{/* Stats Grid */}
-							<div className="grid grid-cols-3 gap-4 mt-2">
-								<div className="text-center">
-									<div className="text-2xl font-extrabold whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-teal-400 to-emerald-400">{experienceString}</div>
-									<div className="text-[10px] uppercase text-slate-500">Experience</div>
-								</div>
-								<div className="text-center">
-									<div className="text-2xl font-bold text-teal-400">6</div>
-									<div className="text-[10px] uppercase text-slate-500 flex items-center justify-center gap-0.5">
-										Projects (USA
-										<img
-											src="https://flagcdn.com/16x12/us.png"
-											alt="US Flag"
-											className="w-3 h-auto object-contain inline-block mx-0.5"
-											loading="lazy"
-											width="16"
-											height="12"
-										/>)
+							{/* Stats Grid - Premium Redesign */}
+							<div className="grid grid-cols-3 gap-3 mt-4">
+								{/* Experience Stat */}
+								<div className={`relative group p-4 rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 ${darkMode ? 'bg-gradient-to-br from-blue-500/20 via-slate-800 to-teal-500/20' : 'bg-gradient-to-br from-blue-500/10 via-slate-100 to-teal-500/10'} border ${darkMode ? 'border-blue-500/30' : 'border-blue-400/40'}`}>
+									<div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+										<div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-teal-500/20 blur-xl"></div>
+									</div>
+									<div className="relative text-center">
+										<div className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-teal-400 to-emerald-400 animate-pulse">
+											{experienceString}
+										</div>
+										<div className={`text-[9px] uppercase tracking-wider font-bold mt-1 ${darkMode ? 'text-blue-300/80' : 'text-blue-600/80'}`}>
+											Experience
+										</div>
 									</div>
 								</div>
-								<div className="text-center">
-									<div className="text-2xl font-bold text-purple-400">4.0</div>
-									<div className="text-[10px] uppercase text-slate-500">GPA</div>
+
+								{/* Projects Stat */}
+								<div className={`relative group p-4 rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 ${darkMode ? 'bg-gradient-to-br from-teal-500/20 via-slate-800 to-emerald-500/20' : 'bg-gradient-to-br from-teal-500/10 via-slate-100 to-emerald-500/10'} border ${darkMode ? 'border-teal-500/30' : 'border-teal-400/40'}`}>
+									<div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+										<div className="absolute inset-0 bg-gradient-to-r from-teal-500/20 to-emerald-500/20 blur-xl"></div>
+									</div>
+									<div className="relative text-center">
+										<div className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-emerald-400">
+											6
+										</div>
+										<div className={`text-[9px] uppercase tracking-wider font-bold mt-1 flex items-center justify-center gap-0.5 ${darkMode ? 'text-teal-300/80' : 'text-teal-600/80'}`}>
+											Projects (US
+											<img
+												src="https://flagcdn.com/16x12/us.png"
+												alt="US Flag"
+												className="w-3 h-auto object-contain mx-0.5"
+												loading="lazy"
+												width="16"
+												height="12"
+											/>)
+										</div>
+									</div>
+								</div>
+
+								{/* GPA Stat */}
+								<div className={`relative group p-4 rounded-xl overflow-hidden transition-all duration-300 hover:scale-105 ${darkMode ? 'bg-gradient-to-br from-purple-500/20 via-slate-800 to-pink-500/20' : 'bg-gradient-to-br from-purple-500/10 via-slate-100 to-pink-500/10'} border ${darkMode ? 'border-purple-500/30' : 'border-purple-400/40'}`}>
+									<div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+										<div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 blur-xl"></div>
+									</div>
+									<div className="relative text-center">
+										<div className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+											4.0
+										</div>
+										<div className={`text-[9px] uppercase tracking-wider font-bold mt-1 ${darkMode ? 'text-purple-300/80' : 'text-purple-600/80'}`}>
+											GPA
+										</div>
+									</div>
 								</div>
 							</div>
 
