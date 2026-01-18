@@ -717,7 +717,17 @@ const App = () => {
 							<div className="space-y-8">
 								<div className={`p-6 rounded-2xl border ${darkMode ? 'bg-slate-800/50 border-slate-700' : 'bg-white border-slate-200'}`}>
 									<h3 className="text-xl font-bold">Master's in Computer Science</h3>
-									<p className="text-blue-400 font-medium">Jackson State University</p>
+									<p className="text-blue-400 font-medium flex items-center gap-2">
+										Jackson State University
+										<img
+											src="https://flagcdn.com/24x18/us.png"
+											alt="Flag of United States"
+											className="w-5 h-auto object-contain inline-block"
+											loading="lazy"
+											width="24"
+											height="18"
+										/>
+									</p>
 									<div className="flex justify-between mt-2 text-sm text-slate-500">
 										<span>2019 - 2021</span>
 										<span className="font-bold text-teal-400">GPA: 4.0 / 4</span>
@@ -725,7 +735,17 @@ const App = () => {
 								</div>
 								<div className={`p-6 rounded-2xl border ${darkMode ? 'bg-slate-800/50 border-slate-700' : 'bg-white border-slate-200'}`}>
 									<h3 className="text-xl font-bold">B.Sc. Electrical & Electronics Engineering</h3>
-									<p className="text-blue-400 font-medium">University of Khartoum</p>
+									<p className="text-blue-400 font-medium flex items-center gap-2">
+										University of Khartoum
+										<img
+											src="https://flagcdn.com/24x18/sd.png"
+											alt="Flag of Sudan"
+											className="w-5 h-auto object-contain inline-block"
+											loading="lazy"
+											width="24"
+											height="18"
+										/>
+									</p>
 									<div className="flex justify-between mt-2 text-sm text-slate-500">
 										<span>2008 - 2013</span>
 										<span className="font-bold text-teal-400">CGPA: 3.2 / 4</span>
