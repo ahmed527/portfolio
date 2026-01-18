@@ -365,7 +365,7 @@ const App = () => {
 	const profileStack = ['.NET', 'Angular', 'React', 'Azure'];
 
 	return (
-		<div className={`min-h-screen relative transition-colors duration-300 ${darkMode ? 'bg-slate-900 text-slate-100' : 'bg-slate-50 text-slate-900'} font-sans`}>
+		<div className={`min-h-screen relative transition-colors duration-300 ${darkMode ? 'bg-slate-900 text-slate-100' : 'bg-slate-200 text-slate-900'} font-sans`}>
 
 			{/* The Waving Flag Background */}
 			<FlagBackground />
@@ -373,7 +373,7 @@ const App = () => {
 			{/* Main Content Wrapper - z-10 ensures it sits above the flag */}
 			<div className="relative z-10">
 				{/* Navigation */}
-				<nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? (darkMode ? 'bg-slate-900/90 shadow-lg backdrop-blur-md' : 'bg-white/90 shadow-lg backdrop-blur-md') : 'bg-transparent'}`}>
+				<nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? (darkMode ? 'bg-slate-900/90 shadow-lg backdrop-blur-md' : 'bg-slate-200/90 shadow-lg backdrop-blur-md') : 'bg-transparent'}`}>
 					<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 						<div className="flex items-center justify-between h-16">
 							<div className="flex-shrink-0 font-bold text-2xl tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-400">
@@ -425,7 +425,7 @@ const App = () => {
 
 					{/* Mobile menu */}
 					{isMenuOpen && (
-						<div className={`md:hidden ${darkMode ? 'bg-slate-900' : 'bg-white'} border-b ${darkMode ? 'border-slate-800' : 'border-slate-200'}`}>
+						<div className={`md:hidden ${darkMode ? 'bg-slate-900' : 'bg-slate-200'} border-b ${darkMode ? 'border-slate-800' : 'border-slate-400'}`}>
 							<div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
 								{navLinks.map((link) => (
 									<a
@@ -496,7 +496,7 @@ const App = () => {
 						<div className={`absolute inset-0 bg-gradient-to-r from-blue-500 to-teal-500 rounded-2xl blur-3xl opacity-20 group-hover:opacity-30 transition-opacity duration-500`}></div>
 
 						{/* New Profile Card Visual */}
-						<div className={`relative w-full aspect-square rounded-2xl border ${darkMode ? 'bg-slate-800/40 border-slate-700/50' : 'bg-white/60 border-slate-200'} backdrop-blur-xl p-8 flex flex-col justify-center gap-6 shadow-2xl`}>
+						<div className={`relative w-full aspect-square rounded-2xl border ${darkMode ? 'bg-slate-800/40 border-slate-700/50' : 'bg-slate-100/90 border-slate-400'} backdrop-blur-xl p-8 flex flex-col justify-center gap-6 shadow-2xl`}>
 
 							{/* Header / Avatar Area */}
 							<div className="flex items-center gap-5 pb-6 border-b border-dashed border-slate-500/30">
@@ -510,7 +510,7 @@ const App = () => {
 							</div>
 
 							{/* Status Item */}
-							<div className={`flex items-center gap-4 p-4 rounded-xl ${darkMode ? 'bg-slate-700/30' : 'bg-slate-50'}`}>
+							<div className={`flex items-center gap-4 p-4 rounded-xl ${darkMode ? 'bg-slate-700/30' : 'bg-slate-300/80'}`}>
 								<div className={`p-2 rounded-lg ${darkMode ? 'bg-green-500/20 text-green-400' : 'bg-green-100 text-green-600'}`}>
 									<CheckCircle2 size={24} />
 								</div>
@@ -521,14 +521,14 @@ const App = () => {
 							</div>
 
 							{/* Stack Items */}
-							<div className={`flex flex-col gap-3 p-4 rounded-xl ${darkMode ? 'bg-slate-700/30' : 'bg-slate-50'}`}>
+							<div className={`flex flex-col gap-3 p-4 rounded-xl ${darkMode ? 'bg-slate-700/30' : 'bg-slate-300/80'}`}>
 								<div className="flex items-center gap-2 mb-1">
 									<Layers size={16} className={darkMode ? 'text-slate-400' : 'text-slate-500'} />
 									<p className={`text-xs uppercase tracking-wider font-semibold ${darkMode ? 'text-slate-400' : 'text-slate-500'}`}>Core Stack</p>
 								</div>
 								<div className="flex flex-wrap gap-2">
 									{profileStack.map((tech, i) => (
-										<span key={i} className={`px-3 py-1.5 rounded-md text-sm font-semibold shadow-sm ${darkMode ? 'bg-slate-800 text-blue-300 border border-slate-600' : 'bg-white text-blue-600 border border-slate-200'}`}>
+										<span key={i} className={`px-3 py-1.5 rounded-md text-sm font-semibold shadow-sm ${darkMode ? 'bg-slate-800 text-blue-300 border border-slate-600' : 'bg-slate-100 text-blue-600 border border-slate-400'}`}>
 											{tech}
 										</span>
 									))}
@@ -556,7 +556,7 @@ const App = () => {
 				</section>
 
 				{/* Skills Section */}
-				<section id="skills" className={`py-20 px-4 sm:px-6 lg:px-8 ${darkMode ? 'bg-slate-800/30' : 'bg-slate-100/50'}`}>
+				<section id="skills" className={`py-20 px-4 sm:px-6 lg:px-8 ${darkMode ? 'bg-slate-800/30' : 'bg-slate-300/70'}`}>
 					<div className="max-w-7xl mx-auto">
 						<div className="text-center mb-16">
 							<h2 className="text-3xl md:text-4xl font-bold mb-4">Technical Arsenal</h2>
@@ -566,14 +566,14 @@ const App = () => {
 
 						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 							{skills.map((skill, index) => (
-								<div key={index} className={`p-6 rounded-2xl border transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${darkMode ? 'bg-slate-800 border-slate-700 hover:border-blue-500/50' : 'bg-white border-slate-200 hover:border-blue-400/50'}`}>
+								<div key={index} className={`p-6 rounded-2xl border transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${darkMode ? 'bg-slate-800 border-slate-700 hover:border-blue-500/50' : 'bg-slate-100 border-slate-400 hover:border-blue-400/50'}`}>
 									<div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-6 ${darkMode ? 'bg-slate-700 text-blue-400' : 'bg-blue-50 text-blue-600'}`}>
 										{skill.icon}
 									</div>
 									<h3 className="text-xl font-bold mb-4">{skill.category}</h3>
 									<div className="flex flex-wrap gap-2">
 										{skill.items.map((item, idx) => (
-											<span key={idx} className={`px-2.5 py-1 rounded-md text-sm font-medium ${darkMode ? 'bg-slate-700 text-slate-300' : 'bg-slate-100 text-slate-700'}`}>
+											<span key={idx} className={`px-2.5 py-1 rounded-md text-sm font-medium ${darkMode ? 'bg-slate-700 text-slate-300' : 'bg-slate-300 text-slate-700'}`}>
 												{item}
 											</span>
 										))}
@@ -618,13 +618,13 @@ const App = () => {
 									</div>
 
 									{/* Timeline Dot */}
-									<div className={`absolute left-[-37px] md:left-[195px] top-1.5 w-3 h-3 rounded-full border-2 ${darkMode ? 'bg-slate-900 border-blue-500' : 'bg-white border-blue-500'} z-10`}></div>
+									<div className={`absolute left-[-37px] md:left-[195px] top-1.5 w-3 h-3 rounded-full border-2 ${darkMode ? 'bg-slate-900 border-blue-500' : 'bg-slate-200 border-blue-500'} z-10`}></div>
 
 									{/* Content Card */}
-									<div className={`flex-1 p-6 rounded-2xl border transition-all ${darkMode ? 'bg-slate-800/50 border-slate-700 hover:bg-slate-800' : 'bg-white border-slate-200 hover:shadow-lg'}`}>
+									<div className={`flex-1 p-6 rounded-2xl border transition-all ${darkMode ? 'bg-slate-800/50 border-slate-700 hover:bg-slate-800' : 'bg-slate-100 border-slate-400 hover:shadow-lg'}`}>
 										<div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
 											<div className="flex items-center gap-3">
-												<div className={`p-2 rounded-lg ${darkMode ? 'bg-slate-700' : 'bg-slate-100'}`}>
+												<div className={`p-2 rounded-lg ${darkMode ? 'bg-slate-700' : 'bg-slate-300'}`}>
 													<Briefcase size={18} className="text-blue-500" />
 												</div>
 												<h3 className="text-xl font-bold">{job.role}</h3>
@@ -650,7 +650,7 @@ const App = () => {
 				</section>
 
 				{/* Projects Section */}
-				<section id="projects" className={`py-20 px-4 sm:px-6 lg:px-8 ${darkMode ? 'bg-slate-800/30' : 'bg-slate-100/50'}`}>
+				<section id="projects" className={`py-20 px-4 sm:px-6 lg:px-8 ${darkMode ? 'bg-slate-800/30' : 'bg-slate-300/70'}`}>
 					<div className="max-w-7xl mx-auto">
 						<div className="text-center mb-16">
 							<h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
@@ -660,12 +660,12 @@ const App = () => {
 
 						<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 							{projects.map((project, index) => (
-								<div key={index} className={`group relative rounded-2xl overflow-hidden border transition-all duration-300 hover:shadow-2xl ${darkMode ? 'bg-slate-800 border-slate-700' : 'bg-white border-slate-200'}`}>
+								<div key={index} className={`group relative rounded-2xl overflow-hidden border transition-all duration-300 hover:shadow-2xl ${darkMode ? 'bg-slate-800 border-slate-700' : 'bg-slate-100 border-slate-400'}`}>
 									<div className={`h-2 w-full bg-gradient-to-r ${index % 2 === 0 ? 'from-blue-500 to-teal-500' : 'from-purple-500 to-pink-500'}`}></div>
 									<div className="p-8 flex flex-col h-full">
 										<div className="flex justify-between items-start mb-2">
 											<div className="flex items-center gap-3">
-												<div className={`p-2 rounded-lg ${darkMode ? 'bg-slate-900' : 'bg-slate-100'}`}>
+												<div className={`p-2 rounded-lg ${darkMode ? 'bg-slate-900' : 'bg-slate-300'}`}>
 													{project.icon}
 												</div>
 												<h3 className="text-2xl font-bold group-hover:text-blue-400 transition-colors">{project.title}</h3>
@@ -678,7 +678,7 @@ const App = () => {
 										</div>
 
 										<div className="mb-6">
-											<span className={`text-xs font-bold tracking-wider uppercase px-2 py-1 rounded ${darkMode ? 'bg-slate-700 text-slate-300' : 'bg-slate-100 text-slate-600'}`}>
+											<span className={`text-xs font-bold tracking-wider uppercase px-2 py-1 rounded ${darkMode ? 'bg-slate-700 text-slate-300' : 'bg-slate-300 text-slate-600'}`}>
 												{project.client}
 											</span>
 										</div>
@@ -715,7 +715,7 @@ const App = () => {
 								<h2 className="text-3xl font-bold">Education</h2>
 							</div>
 							<div className="space-y-8">
-								<div className={`p-6 rounded-2xl border ${darkMode ? 'bg-slate-800/50 border-slate-700' : 'bg-white border-slate-200'}`}>
+								<div className={`p-6 rounded-2xl border ${darkMode ? 'bg-slate-800/50 border-slate-700' : 'bg-slate-100 border-slate-400'}`}>
 									<h3 className="text-xl font-bold">Master's in Computer Science</h3>
 									<p className="text-blue-400 font-medium flex items-center gap-2">
 										Jackson State University
@@ -733,7 +733,7 @@ const App = () => {
 										<span className="font-bold text-teal-400">GPA: 4.0 / 4</span>
 									</div>
 								</div>
-								<div className={`p-6 rounded-2xl border ${darkMode ? 'bg-slate-800/50 border-slate-700' : 'bg-white border-slate-200'}`}>
+								<div className={`p-6 rounded-2xl border ${darkMode ? 'bg-slate-800/50 border-slate-700' : 'bg-slate-100 border-slate-400'}`}>
 									<h3 className="text-xl font-bold">B.Sc. Electrical & Electronics Engineering</h3>
 									<p className="text-blue-400 font-medium flex items-center gap-2">
 										University of Khartoum
@@ -806,7 +806,7 @@ const App = () => {
 				</section>
 
 				{/* Footer */}
-				<footer className={`py-12 px-4 border-t ${darkMode ? 'bg-slate-900 border-slate-800' : 'bg-slate-50 border-slate-200'}`}>
+				<footer className={`py-12 px-4 border-t ${darkMode ? 'bg-slate-900 border-slate-800' : 'bg-slate-200 border-slate-400'}`}>
 					<div className="max-w-7xl mx-auto text-center">
 						<h2 className="text-2xl font-bold mb-6">Ready to Drive Enterprise Success</h2>
 						<div className="flex justify-center gap-8 mb-8">
