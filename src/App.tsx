@@ -548,7 +548,17 @@ const App = () => {
 								</div>
 								<div className="text-center">
 									<div className="text-2xl font-bold text-teal-400">6</div>
-									<div className="text-[10px] uppercase text-slate-500">Projects (USA)</div>
+									<div className="text-[10px] uppercase text-slate-500 flex items-center justify-center gap-0.5">
+										Projects (USA
+										<img
+											src="https://flagcdn.com/16x12/us.png"
+											alt="US Flag"
+											className="w-3 h-auto object-contain inline-block mx-0.5"
+											loading="lazy"
+											width="16"
+											height="12"
+										/>)
+									</div>
 								</div>
 								<div className="text-center">
 									<div className="text-2xl font-bold text-purple-400">4.0</div>
