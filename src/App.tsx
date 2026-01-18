@@ -72,7 +72,10 @@ const FlagBackground = () => {
 const App = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const [activeSection, setActiveSection] = useState('home');
-	const [darkMode, setDarkMode] = useState(true);
+	const [darkMode, setDarkMode] = useState(() => {
+		const saved = localStorage.getItem('theme');
+		return saved ? saved === 'dark' : true; // Default to dark mode
+	});
 	const [scrolled, setScrolled] = useState(false);
 	const [experienceString, setExperienceString] = useState('');
 
@@ -119,7 +122,9 @@ const App = () => {
 	}, []);
 
 	const toggleTheme = () => {
-		setDarkMode(!darkMode);
+		const newMode = !darkMode;
+		setDarkMode(newMode);
+		localStorage.setItem('theme', newMode ? 'dark' : 'light');
 	};
 
 	const navLinks = [
