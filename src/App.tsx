@@ -379,7 +379,7 @@ const App = () => {
 			<div className="relative z-10">
 				{/* Navigation */}
 				<nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? (darkMode ? 'bg-slate-900/90 shadow-lg backdrop-blur-md' : 'bg-slate-200/90 shadow-lg backdrop-blur-md') : 'bg-transparent'}`}>
-					<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
 						<div className="flex items-center justify-between h-16">
 							<div className="flex-shrink-0 font-bold text-2xl tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-400">
 								AM.
@@ -451,7 +451,7 @@ const App = () => {
 				</nav>
 
 				{/* Hero Section */}
-				<section id="home" className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+				<section id="home" className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-[1600px] mx-auto flex flex-col md:flex-row items-center gap-12">
 					<div className="flex-1 space-y-8 animate-fade-in-up">
 						<div className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold tracking-wide uppercase bg-blue-500/10 text-blue-500 border border-blue-500/20">
 							Senior Full Stack .NET Developer
@@ -602,7 +602,7 @@ const App = () => {
 
 				{/* Skills Section */}
 				<section id="skills" className={`py-20 px-4 sm:px-6 lg:px-8 ${darkMode ? 'bg-slate-800/30' : 'bg-slate-300/70'}`}>
-					<div className="max-w-7xl mx-auto">
+					<div className="max-w-[1600px] mx-auto">
 						<div className="text-center mb-16">
 							<h2 className="text-3xl md:text-4xl font-bold mb-4">Technical Arsenal</h2>
 							<div className="w-20 h-1 bg-blue-500 mx-auto rounded-full"></div>
@@ -630,7 +630,7 @@ const App = () => {
 				</section>
 
 				{/* Experience Section */}
-				<section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+				<section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
 					<div className="mb-16">
 						<h2 className="text-3xl md:text-4xl font-bold mb-4">Professional Journey</h2>
 						<div className="w-20 h-1 bg-teal-500 rounded-full"></div>
@@ -696,7 +696,7 @@ const App = () => {
 
 				{/* Projects Section */}
 				<section id="projects" className={`py-20 px-4 sm:px-6 lg:px-8 ${darkMode ? 'bg-slate-800/30' : 'bg-slate-300/70'}`}>
-					<div className="max-w-7xl mx-auto">
+					<div className="max-w-[1600px] mx-auto">
 						<div className="text-center mb-16">
 							<h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
 							<div className="w-20 h-1 bg-purple-500 mx-auto rounded-full"></div>
@@ -752,7 +752,7 @@ const App = () => {
 				</section>
 
 				{/* Education & Certs */}
-				<section id="education" className="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+				<section id="education" className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-12">
 						<div>
 							<div className="flex items-center gap-3 mb-8">
@@ -852,7 +852,7 @@ const App = () => {
 
 				{/* Footer */}
 				<footer className={`py-12 px-4 border-t ${darkMode ? 'bg-slate-900 border-slate-800' : 'bg-slate-200 border-slate-400'}`}>
-					<div className="max-w-7xl mx-auto text-center">
+					<div className="max-w-[1600px] mx-auto text-center">
 						<h2 className="text-2xl font-bold mb-6">Ready to Drive Enterprise Success</h2>
 						<div className="flex justify-center gap-8 mb-8">
 							<a href="mailto:ahmed5_27@hotmail.com" className={`hover:text-blue-400 transition-colors ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
