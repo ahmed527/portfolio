@@ -1,0 +1,31 @@
+{
+  "name": "react-use-skills",
+  "version": "1.0.0",
+  "description": "Apply react-use hooks where appropriate to build concise, maintainable React features.",
+  "license": "Unlicense",
+  "keywords": [
+    "react",
+    "hooks",
+    "react-use",
+    "agent-skills",
+    "skills",
+    "ai-agents"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/streamich/react-use"
+  },
+  "homepage": "https://skills.sh",
+  "author": "Adapted from streamich/react-use",
+  "main": "SKILL.md",
+  "files": [
+    "SKILL.md",
+    "references/",
+    "README.md"
+  ],
+  "skill": {
+    "name": "react-use-hooks",
+    "description": "Apply react-use hooks where appropriate to build concise, maintainable React features.",
+    "compatibility": "Requires React 16.8+ with hooks support"
+  }
+}

@@ -205,7 +205,7 @@ const App = () => {
 		},
 		{
 			company: "Sigma Resources, State of Wisconsin",
-			role: "Full Stack .NET Developer",
+			role: ".NET Developer",
 			period: "Jan 2022 – May 2022",
 			location: "PA",
 			countryCode: "us",
@@ -220,7 +220,7 @@ const App = () => {
 		},
 		{
 			company: "Sigma Resources, (Contractor for Deloitte)",
-			role: "Full Stack .NET Developer",
+			role: ".NET Developer",
 			period: "Nov 2020 – Jan 2022",
 			location: "PA",
 			countryCode: "us",
@@ -248,7 +248,7 @@ const App = () => {
 		},
 		{
 			company: "Jackson State University Innovation Center",
-			role: "Software Developer",
+			role: "Research And Teaching Assistant (Software Developer)",
 			period: "Aug 2019 – Apr 2020",
 			location: "MS",
 			countryCode: "us",
@@ -261,7 +261,7 @@ const App = () => {
 		},
 		{
 			company: "The Cohen International Group (TCIG)",
-			role: "Full Stack Software Developer",
+			role: "Software Developer",
 			period: "Jun 2018 – Jul 2019",
 			location: "Bahrain",
 			countryCode: "bh",
@@ -275,7 +275,7 @@ const App = () => {
 		},
 		{
 			company: "Reliance Technology",
-			role: "Full Stack Software Developer",
+			role: "Software Engineer",
 			period: "Feb 2017 – May 2018",
 			location: "Sudan",
 			countryCode: "sd",
