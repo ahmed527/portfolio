@@ -169,8 +169,7 @@ const App = () => {
 			description: "DHS MATP Mileage Reimbursement.",
 			achievements: [
 				"Design and develop secure, scalable web applications using .NET Core and Angular.",
-				"Optimize SQL Server (Azure SQL) databases through query tuning and indexing.",
-				"Implement RESTful APIs leveraging Azure services like (keyvalut, functions, storage account).",
+				"Implement RESTful APIs leveraging Azure services like (keyvalut, functions, redis cache, and storage account).",
 				"Ensure WCAG 2.1 AA accessibility and compliance with state privacy regulations."
 			]
 		},
@@ -184,7 +183,7 @@ const App = () => {
 			description: "eCIS Modernization for the State of Pennsylvania.",
 			achievements: [
 				"Modernized eCIS projects implementing microservices architecture.",
-				"Spearheaded API development integrating .NET Web API with Oracle and MSSQL.",
+				"Developed .NET Web API with Oracle and MSSQL.",
 				"Optimized application architecture, significantly enhancing response times.",
 				"Supported CI/CD pipeline implementation in Azure DevOps."
 			]
@@ -293,11 +292,11 @@ const App = () => {
 		{
 			title: "MATP Mileage Reimbursement",
 			fullName: "Medical Assistance Transportation Program",
-			client: "DHS - State of Pennsylvania",
+			client: "PennDOT  - State of Pennsylvania",
 			icon: <Shield className="w-6 h-6 text-teal-400" />,
 			tech: [".NET Core", "Angular", "Azure", "SQL"],
 			details: [
-				"Develop and optimize .NET Core and Angular applications for DHS’s Medicaid and MATP administration systems, ensuring high scalability, accessibility (WCAG 2.1 AA) and secure data exchange.",
+				"Develop and optimize .NET Core and Angular applications for PennDOT Medicaid and MATP reimbursement systems, ensuring high scalability, accessibility (WCAG 2.1 AA) and secure data exchange.",
 				"Implement security standards by integrating the application with SiteMinder using OpenID Connect and OAuth 2.0 with PKCE, enforcing strict access control policies."
 			]
 		},
