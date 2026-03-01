@@ -168,7 +168,7 @@ const App = () => {
 			type: "Contract",
 			description: "DHS MATP Mileage Reimbursement.",
 			achievements: [
-				"Design and develop secure, scalable web applications using .NET Core and Angular.",
+				"Develop and optimize secure, scalable web applications using .NET Core and Angular.",
 				"Implement RESTful APIs leveraging Azure services like (keyvalut, functions, redis cache, and storage account).",
 				"Ensure WCAG 2.1 AA accessibility and compliance with state privacy regulations."
 			]
