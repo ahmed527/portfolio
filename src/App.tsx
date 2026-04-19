@@ -165,7 +165,6 @@ const App = () => {
 			period: "Oct 2025 – Present",
 			location: "PA",
 			countryCode: "us",
-			type: "Contract",
 			description: "DHS MATP Mileage Reimbursement.",
 			achievements: [
 				"Develop and optimize secure, scalable web applications using .NET Core and Angular.",
@@ -179,7 +178,6 @@ const App = () => {
 			period: "Nov 2022 – Oct 2025",
 			location: "PA",
 			countryCode: "us",
-			type: "Contract",
 			description: "eCIS Modernization for the State of Pennsylvania.",
 			achievements: [
 				"Modernized eCIS projects implementing microservices architecture.",
@@ -194,7 +192,6 @@ const App = () => {
 			period: "May 2022 – Jul 2022",
 			location: "PA",
 			countryCode: "us",
-			type: "Contract",
 			description: "NG911 Emergency Response System.",
 			achievements: [
 				"Designed key software components ensuring real-time data accuracy.",
@@ -208,7 +205,6 @@ const App = () => {
 			period: "Jan 2022 – May 2022",
 			location: "PA",
 			countryCode: "us",
-			type: "Contract",
 			description: "WIC (Women, Infants and Children) Nutrition Program.",
 			achievements: [
 				"Developed and maintained software solutions using ASP.NET and JavaScript.",
@@ -223,7 +219,6 @@ const App = () => {
 			period: "Nov 2020 – Jan 2022",
 			location: "PA",
 			countryCode: "us",
-			type: "Contract",
 			description: "WCAIS (Workers' Compensation Automation and Integration System).",
 			achievements: [
 				"Developed .NET Web APIs to streamline data processing.",
@@ -237,7 +232,6 @@ const App = () => {
 			period: "Apr 2020 – Jul 2020",
 			location: "PA",
 			countryCode: "us",
-			type: "Contract",
 			description: "Compass Project API Implementation.",
 			achievements: [
 				"Implemented new API features integrating .NET Web API with Oracle databases.",
@@ -251,7 +245,6 @@ const App = () => {
 			period: "Aug 2019 – Apr 2020",
 			location: "MS",
 			countryCode: "us",
-			type: "Employee",
 			description: "University Registration & Management Applications.",
 			achievements: [
 				"Led development of web-based registration apps using .NET MVC Core and Flutter.",
@@ -264,7 +257,6 @@ const App = () => {
 			period: "Jun 2018 – Jul 2019",
 			location: "Bahrain",
 			countryCode: "bh",
-			type: "Employee",
 			description: "Travel Solutions Platform.",
 			achievements: [
 				"Developed applications using .NET, Angular, React, and RabbitMQ.",
@@ -278,7 +270,6 @@ const App = () => {
 			period: "Feb 2017 – May 2018",
 			location: "Sudan",
 			countryCode: "sd",
-			type: "Employee",
 			description: "Banking & Enterprise Applications.",
 			achievements: [
 				"Built Electronic Cheque Clearing (ECC) and ERP platforms.",
@@ -655,9 +646,6 @@ const App = () => {
 												width="24"
 												height="18"
 											/>
-										</div>
-										<div className={`text-xs mt-1 inline-block px-2 py-0.5 rounded ${darkMode ? 'bg-slate-800 text-slate-500' : 'bg-slate-200 text-slate-600'}`}>
-											{job.type}
 										</div>
 									</div>
 
