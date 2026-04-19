@@ -557,15 +557,16 @@ const App = () => {
 											6
 										</div>
 										<div className={`text-[9px] uppercase tracking-wider font-bold mt-1 flex items-center justify-center gap-0.5 ${darkMode ? 'text-teal-300/80' : 'text-teal-600/80'}`}>
-											Projects (US
+											Projects
 											<img
 												src="https://flagcdn.com/16x12/us.png"
 												alt="US Flag"
+												aria-label="US"
 												className="w-3 h-auto object-contain mx-0.5"
 												loading="lazy"
 												width="16"
 												height="12"
-											/>)
+											/>
 										</div>
 									</div>
 								</div>
@@ -579,8 +580,17 @@ const App = () => {
 										<div className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
 											4.0
 										</div>
-										<div className={`text-[9px] uppercase tracking-wider font-bold mt-1 ${darkMode ? 'text-purple-300/80' : 'text-purple-600/80'}`}>
+										<div className={`text-[9px] uppercase tracking-wider font-bold mt-1 flex items-center justify-center gap-0.5 ${darkMode ? 'text-purple-300/80' : 'text-purple-600/80'}`}>
 											GPA
+											<img
+												src="https://flagcdn.com/16x12/us.png"
+												alt="US Flag"
+												aria-label="US"
+												className="w-3 h-auto object-contain mx-0.5"
+												loading="lazy"
+												width="16"
+												height="12"
+											/>
 										</div>
 									</div>
 								</div>
