@@ -139,12 +139,12 @@ const App = () => {
 		{
 			category: "Back-End Architecture",
 			icon: <Server className="w-6 h-6" />,
-			items: [".NET", "ASP.NET MVC", "C#", "Web API", "Entity Framework", "Microservices", "SOLID Principles", "RabbitMQ", "SSRS", "Backround Jobs"]
+			items: [".NET | 3.5 - 10", "ASP.NET MVC", "C#", "Web API", "EF Core | 4 - 10", "Microservices", "SOLID Principles", "RabbitMQ", "SSRS", "Backround Jobs"]
 		},
 		{
 			category: "Front-End Development",
 			icon: <Layout className="w-6 h-6" />,
-			items: ["Angular", "React", "Vue.js", "TypeScript", "JavaScript", "HTML5/CSS3", "Bootstrap"]
+			items: ["Angular | 7, 8, 14, 20", "React", "Vue.js", "TypeScript", "JavaScript", "HTML5/CSS3", "Bootstrap"]
 		},
 		{
 			category: "Cloud & DevOps",
@@ -607,11 +607,15 @@ const App = () => {
 									</div>
 									<h3 className="text-xl font-bold mb-4">{skill.category}</h3>
 									<div className="flex flex-wrap gap-2">
-										{skill.items.map((item, idx) => (
-											<span key={idx} className={`px-2.5 py-1 rounded-md text-sm font-medium ${darkMode ? 'bg-slate-700 text-slate-300' : 'bg-slate-300 text-slate-700'}`}>
-												{item}
-											</span>
-										))}
+										{skill.items.map((item, idx) => {
+											const [name, version] = typeof item === 'string' && item.includes('|') ? item.split('|').map(s => s.trim()) : [item, null];
+											return (
+												<span key={idx} className={`px-2.5 py-1 rounded-md text-sm font-medium ${darkMode ? 'bg-slate-700 text-slate-300' : 'bg-slate-300 text-slate-700'}`}>
+													{name}
+													{version && <span className={`ml-1 text-xs opacity-90 border-l pl-1 ${darkMode ? 'border-slate-500 text-blue-300' : 'border-slate-400 text-blue-700'}`}>{version}</span>}
+												</span>
+											);
+										})}
 									</div>
 								</div>
 							))}
