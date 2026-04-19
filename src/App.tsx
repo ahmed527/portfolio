@@ -160,7 +160,7 @@ const App = () => {
 
 	const experience = [
 		{
-			company: "Collasys LLC, State of Pennsylvania",
+			company: "Collasys LLC (Contractor for PennDot)",
 			role: "Senior Full Stack .NET Developer",
 			period: "Oct 2025 – Present",
 			location: "PA",
