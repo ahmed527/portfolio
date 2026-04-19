@@ -285,7 +285,7 @@ const App = () => {
 			fullName: "Medical Assistance Transportation Program",
 			client: "PennDOT  - State of Pennsylvania",
 			icon: <Shield className="w-6 h-6 text-teal-400" />,
-			tech: [".NET Core", "Angular", "Azure", "SQL"],
+			tech: [".NET Core", "Angular", "Azure", "SQL", "Azure DevOps"],
 			details: [
 				"Develop and optimize .NET Core and Angular applications for PennDOT Medicaid and MATP reimbursement systems, ensuring high scalability, accessibility (WCAG 2.1 AA) and secure data exchange.",
 				"Implement security standards by integrating the application with SiteMinder using OpenID Connect and OAuth 2.0 with PKCE, enforcing strict access control policies."
@@ -296,7 +296,7 @@ const App = () => {
 			fullName: "Electronic Client Information System",
 			client: "DHS - State of Pennsylvania",
 			icon: <Server className="w-6 h-6 text-blue-400" />,
-			tech: [".NET", "Oracle", "SSRS Reports", "Batches"],
+			tech: [".NET", "Oracle", "SSRS Reports", "Batches", "TFS"],
 			details: [
 				"Complete modernization of legacy systems to a robust architecture, improving maintainability.",
 				"Significantly enhanced system performance and scalability for state-wide usage.",
@@ -335,7 +335,7 @@ const App = () => {
 			fullName: "Special Supplemental Nutrition Program for Women, Infants, and Children",
 			client: "DHS - State of Wisconsin",
 			icon: <Layers className="w-6 h-6 text-orange-400" />,
-			tech: [".NET Web API", "JavaScript", "SQL Server"],
+			tech: [".NET Web API", "JavaScript", "SQL Server", "TFS"],
 			details: [
 				"Developed secure .NET Web APIs and plain JavaScript front-ends for real-time eligibility and data interaction.",
 				"Managed complex SQL Server databases and automated nightly benefit processing and data validation using SQL Server Jobs.",
