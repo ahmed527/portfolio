@@ -144,7 +144,7 @@ const App = () => {
 		{
 			category: "Front-End Development",
 			icon: <Layout className="w-6 h-6" />,
-			items: ["Angular | 7, 8, 14, 20", "React", "Vue.js", "TypeScript", "JavaScript", "HTML5/CSS3", "Bootstrap"]
+			items: ["Angular | 7, 8, 14, 20", "React", "Vue.js", "TypeScript", "JavaScript", "HTML5/CSS3", "Bootstrap | 3 - 5"]
 		},
 		{
 			category: "Cloud & DevOps",
