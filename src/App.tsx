@@ -139,7 +139,7 @@ const App = () => {
 		{
 			category: "Back-End Architecture",
 			icon: <Server className="w-6 h-6" />,
-			items: [".NET | 3.5 - 10", "ASP.NET MVC", "C#", "Web API", "EF Core | 4 - 10", "Microservices", "SOLID Principles", "RabbitMQ", "SSRS", "Backround Jobs"]
+			items: [".NET | 3.5 - 10", "ASP.NET MVC", "C#", "Web API", "EF Core | 4 - 10", "Microservices", "Hibernate", "RabbitMQ", "SSRS", "Backround Jobs"]
 		},
 		{
 			category: "Front-End Development",
