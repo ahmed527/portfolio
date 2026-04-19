@@ -154,7 +154,7 @@ const App = () => {
 		{
 			category: "Databases",
 			icon: <Database className="w-6 h-6" />,
-			items: ["SQL Server", "Oracle", "Redis", "MongoDB", "Firebase"]
+			items: ["SQL Server", "Oracle | 10g - 19c", "Redis", "MongoDB", "Firebase"]
 		}
 	];
 
