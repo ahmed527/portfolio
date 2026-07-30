@@ -23,6 +23,14 @@ const FlagBackground = () => {
             50% { transform: translateX(0%) skewX(-5deg); }
             100% { transform: translateX(100%) skewX(-12deg); }
           }
+          @media (prefers-reduced-motion: reduce) {
+            * {
+              animation-duration: 0.01ms !important;
+              animation-iteration-count: 1 !important;
+              transition-duration: 0.01ms !important;
+              scroll-behavior: auto !important;
+            }
+          }
         `}
 			</style>
 
@@ -139,12 +147,12 @@ const App = () => {
 		{
 			category: "Back-End Architecture",
 			icon: <Server className="w-6 h-6" />,
-			items: [".NET Core", "ASP.NET MVC", "C#", "Web API", "Entity Framework", "Microservices", "SOLID Principles", "RabbitMQ", "SSRS", "Backround Jobs"]
+			items: [".NET | 3.5 - 10", "ASP.NET MVC", "C#", "Web API", "EF Core | 4 - 10", "Microservices", "Hibernate", "RabbitMQ", "SSRS", "Backround Jobs"]
 		},
 		{
 			category: "Front-End Development",
 			icon: <Layout className="w-6 h-6" />,
-			items: ["Angular", "React", "Vue.js", "TypeScript", "JavaScript", "HTML5/CSS3", "Bootstrap"]
+			items: ["Angular | 7, 8, 14, 20", "React", "Vue.js", "TypeScript", "JavaScript", "HTML5/CSS3", "Bootstrap | 3 - 5"]
 		},
 		{
 			category: "Cloud & DevOps",
@@ -154,19 +162,18 @@ const App = () => {
 		{
 			category: "Databases",
 			icon: <Database className="w-6 h-6" />,
-			items: ["SQL Server", "Oracle", "Redis", "MongoDB", "Firebase"]
+			items: ["SQL Server", "Oracle | 10g - 19c", "Redis", "MongoDB", "Firebase"]
 		}
 	];
 
 	const experience = [
 		{
-			company: "Collasys LLC, State of Pennsylvania",
+			company: "Collasys LLC (Contractor for PennDot)",
 			role: "Senior Full Stack .NET Developer",
 			period: "Oct 2025 – Present",
 			location: "PA",
 			countryCode: "us",
-			type: "Contract",
-			description: "DHS MATP Mileage Reimbursement.",
+			description: "MATP Mileage Reimbursement.",
 			achievements: [
 				"Develop and optimize secure, scalable web applications using .NET Core and Angular.",
 				"Implement RESTful APIs leveraging Azure services like (keyvalut, functions, redis cache, and storage account).",
@@ -179,7 +186,6 @@ const App = () => {
 			period: "Nov 2022 – Oct 2025",
 			location: "PA",
 			countryCode: "us",
-			type: "Contract",
 			description: "eCIS Modernization for the State of Pennsylvania.",
 			achievements: [
 				"Modernized eCIS projects implementing microservices architecture.",
@@ -194,7 +200,6 @@ const App = () => {
 			period: "May 2022 – Jul 2022",
 			location: "PA",
 			countryCode: "us",
-			type: "Contract",
 			description: "NG911 Emergency Response System.",
 			achievements: [
 				"Designed key software components ensuring real-time data accuracy.",
@@ -208,7 +213,6 @@ const App = () => {
 			period: "Jan 2022 – May 2022",
 			location: "PA",
 			countryCode: "us",
-			type: "Contract",
 			description: "WIC (Women, Infants and Children) Nutrition Program.",
 			achievements: [
 				"Developed and maintained software solutions using ASP.NET and JavaScript.",
@@ -223,7 +227,6 @@ const App = () => {
 			period: "Nov 2020 – Jan 2022",
 			location: "PA",
 			countryCode: "us",
-			type: "Contract",
 			description: "WCAIS (Workers' Compensation Automation and Integration System).",
 			achievements: [
 				"Developed .NET Web APIs to streamline data processing.",
@@ -237,7 +240,6 @@ const App = () => {
 			period: "Apr 2020 – Jul 2020",
 			location: "PA",
 			countryCode: "us",
-			type: "Contract",
 			description: "Compass Project API Implementation.",
 			achievements: [
 				"Implemented new API features integrating .NET Web API with Oracle databases.",
@@ -251,7 +253,6 @@ const App = () => {
 			period: "Aug 2019 – Apr 2020",
 			location: "MS",
 			countryCode: "us",
-			type: "Employee",
 			description: "University Registration & Management Applications.",
 			achievements: [
 				"Led development of web-based registration apps using .NET MVC Core and Flutter.",
@@ -264,7 +265,6 @@ const App = () => {
 			period: "Jun 2018 – Jul 2019",
 			location: "Bahrain",
 			countryCode: "bh",
-			type: "Employee",
 			description: "Travel Solutions Platform.",
 			achievements: [
 				"Developed applications using .NET, Angular, React, and RabbitMQ.",
@@ -278,7 +278,6 @@ const App = () => {
 			period: "Feb 2017 – May 2018",
 			location: "Sudan",
 			countryCode: "sd",
-			type: "Employee",
 			description: "Banking & Enterprise Applications.",
 			achievements: [
 				"Built Electronic Cheque Clearing (ECC) and ERP platforms.",
@@ -294,7 +293,7 @@ const App = () => {
 			fullName: "Medical Assistance Transportation Program",
 			client: "PennDOT  - State of Pennsylvania",
 			icon: <Shield className="w-6 h-6 text-teal-400" />,
-			tech: [".NET Core", "Angular", "Azure", "SQL"],
+			tech: [".NET Core", "Angular", "Azure", "SQL", "Azure DevOps"],
 			details: [
 				"Develop and optimize .NET Core and Angular applications for PennDOT Medicaid and MATP reimbursement systems, ensuring high scalability, accessibility (WCAG 2.1 AA) and secure data exchange.",
 				"Implement security standards by integrating the application with SiteMinder using OpenID Connect and OAuth 2.0 with PKCE, enforcing strict access control policies."
@@ -305,7 +304,7 @@ const App = () => {
 			fullName: "Electronic Client Information System",
 			client: "DHS - State of Pennsylvania",
 			icon: <Server className="w-6 h-6 text-blue-400" />,
-			tech: [".NET", "Oracle", "SSRS Reports", "Batches"],
+			tech: [".NET", "Oracle", "SSRS Reports", "Batches", "TFS"],
 			details: [
 				"Complete modernization of legacy systems to a robust architecture, improving maintainability.",
 				"Significantly enhanced system performance and scalability for state-wide usage.",
@@ -344,7 +343,7 @@ const App = () => {
 			fullName: "Special Supplemental Nutrition Program for Women, Infants, and Children",
 			client: "DHS - State of Wisconsin",
 			icon: <Layers className="w-6 h-6 text-orange-400" />,
-			tech: [".NET Web API", "JavaScript", "SQL Server"],
+			tech: [".NET Web API", "JavaScript", "SQL Server", "TFS"],
 			details: [
 				"Developed secure .NET Web APIs and plain JavaScript front-ends for real-time eligibility and data interaction.",
 				"Managed complex SQL Server databases and automated nightly benefit processing and data validation using SQL Server Jobs.",
@@ -374,8 +373,12 @@ const App = () => {
 			{/* The Waving Flag Background */}
 			<FlagBackground />
 
+			<a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-white focus:text-black focus:ring-2 focus:ring-blue-500 focus:outline-none rounded-br-lg">
+				Skip to main content
+			</a>
+
 			{/* Main Content Wrapper - z-10 ensures it sits above the flag */}
-			<div className="relative z-10">
+			<main id="main-content" className="relative z-10">
 				{/* Navigation */}
 				<nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? (darkMode ? 'bg-slate-900/90 shadow-lg backdrop-blur-md' : 'bg-slate-200/90 shadow-lg backdrop-blur-md') : 'bg-transparent'}`}>
 					<div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -390,7 +393,7 @@ const App = () => {
 										<a
 											key={link.name}
 											href={link.href}
-											className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${activeSection === link.href.substring(1)
+											className={`px-3 py-2 rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${activeSection === link.href.substring(1)
 												? 'text-blue-400'
 												: (darkMode ? 'text-slate-300 hover:text-white' : 'text-slate-600 hover:text-slate-900')
 												}`}
@@ -401,9 +404,9 @@ const App = () => {
 									<button
 										onClick={toggleTheme}
 										aria-label="Toggle theme"
-										className={`p-2 rounded-full transition-colors ${darkMode ? 'bg-slate-800 hover:bg-slate-700' : 'bg-slate-200 hover:bg-slate-300'}`}
+										className={`p-2 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${darkMode ? 'bg-slate-800 hover:bg-slate-700' : 'bg-slate-200 hover:bg-slate-300'}`}
 									>
-										{darkMode ? <Sun size={18} /> : <Moon size={18} />}
+										{darkMode ? <Sun size={18} aria-hidden="true" /> : <Moon size={18} aria-hidden="true" />}
 									</button>
 								</div>
 							</div>
@@ -412,16 +415,16 @@ const App = () => {
 								<button
 									onClick={toggleTheme}
 									aria-label="Toggle theme"
-									className={`p-2 rounded-full transition-colors ${darkMode ? 'bg-slate-800' : 'bg-slate-200'}`}
+									className={`p-2 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${darkMode ? 'bg-slate-800' : 'bg-slate-200'}`}
 								>
-									{darkMode ? <Sun size={18} /> : <Moon size={18} />}
+									{darkMode ? <Sun size={18} aria-hidden="true" /> : <Moon size={18} aria-hidden="true" />}
 								</button>
 								<button
 									onClick={() => setIsMenuOpen(!isMenuOpen)}
 									aria-label="Toggle menu"
-									className={`inline-flex items-center justify-center p-2 rounded-md ${darkMode ? 'text-slate-400 hover:text-white' : 'text-slate-600 hover:text-slate-900'}`}
+									className={`inline-flex items-center justify-center p-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${darkMode ? 'text-slate-400 hover:text-white' : 'text-slate-600 hover:text-slate-900'}`}
 								>
-									{isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+									{isMenuOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
 								</button>
 							</div>
 						</div>
@@ -436,7 +439,7 @@ const App = () => {
 										key={link.name}
 										href={link.href}
 										onClick={() => setIsMenuOpen(false)}
-										className={`block px-3 py-2 rounded-md text-base font-medium ${activeSection === link.href.substring(1)
+										className={`block px-3 py-2 rounded-md text-base font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${activeSection === link.href.substring(1)
 											? 'text-blue-400 bg-blue-400/10'
 											: (darkMode ? 'text-slate-300 hover:text-white' : 'text-slate-600 hover:text-slate-900')
 											}`}
@@ -470,27 +473,27 @@ const App = () => {
 						</p>
 
 						<div className="flex flex-wrap gap-4 pt-4">
-							<a href="mailto:ahmed5_27@hotmail.com" className="flex items-center gap-2 px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-medium transition-all transform hover:-translate-y-1 shadow-lg shadow-blue-500/25">
-								<Mail size={20} /> Contact Me
+							<a href="mailto:ahmed5_27@hotmail.com" className="flex items-center gap-2 px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 text-white font-medium transition-all transform hover:-translate-y-1 shadow-lg shadow-blue-500/25">
+								<Mail size={20} aria-hidden="true" /> Contact Me
 							</a>
-							<a href="https://www.linkedin.com/in/ahmed527" target="_blank" rel="noopener noreferrer" className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all border ${darkMode ? 'border-slate-700 hover:bg-slate-800' : 'border-slate-200 hover:bg-slate-100'}`}>
-								<Linkedin size={20} /> LinkedIn
+							<a href="https://www.linkedin.com/in/ahmed527" target="_blank" rel="noopener noreferrer" className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${darkMode ? 'border-slate-700 hover:bg-slate-800' : 'border-slate-200 hover:bg-slate-100'}`}>
+								<Linkedin size={20} aria-hidden="true" /> LinkedIn
 							</a>
 							<a
-								href="https://e.pcloud.link/publink/show?code=XZWPuQZePPygjnxSESI5VDJOjBjT8Ycisik"
+								href="https://e.pcloud.link/publink/show?code=XZ6YroZjYEqjorDt3Fghl70Ohr8PuyxMQD7"
 								target="_blank"
 								rel="noopener noreferrer"
-								className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all border ${darkMode ? 'border-slate-700 hover:bg-slate-800' : 'border-slate-200 hover:bg-slate-100'}`}>
-								<Download size={20} /> Resume
+								className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${darkMode ? 'border-slate-700 hover:bg-slate-800' : 'border-slate-200 hover:bg-slate-100'}`}>
+								<Download size={20} aria-hidden="true" /> Resume
 							</a>
 						</div>
 
-						<div className={`flex items-center gap-6 text-sm ${darkMode ? 'text-slate-500' : 'text-slate-500'} pt-8`}>
+						<div className={`flex items-center gap-6 text-sm ${darkMode ? 'text-slate-400' : 'text-slate-600'} pt-8`}>
 							<div className="flex items-center gap-2">
-								<MapPin size={16} /> Mechanicsburg, PA
+								<MapPin size={16} aria-hidden="true" /> Mechanicsburg, PA
 							</div>
 							<div className="flex items-center gap-2">
-								<Phone size={16} /> (601) 201-1671
+								<Phone size={16} aria-hidden="true" /> (601) 201-1671
 							</div>
 						</div>
 					</div>
@@ -516,7 +519,7 @@ const App = () => {
 							{/* Status Item */}
 							<div className={`flex items-center gap-4 p-4 rounded-xl ${darkMode ? 'bg-slate-700/30' : 'bg-slate-300/80'}`}>
 								<div className={`p-2 rounded-lg ${darkMode ? 'bg-green-500/20 text-green-400' : 'bg-green-100 text-green-600'}`}>
-									<CheckCircle2 size={24} />
+									<CheckCircle2 size={24} aria-hidden="true" />
 								</div>
 								<div>
 									<p className={`text-xs uppercase tracking-wider font-semibold ${darkMode ? 'text-slate-400' : 'text-slate-500'}`}>Professional Focus</p>
@@ -527,7 +530,7 @@ const App = () => {
 							{/* Stack Items */}
 							<div className={`flex flex-col gap-3 p-4 rounded-xl ${darkMode ? 'bg-slate-700/30' : 'bg-slate-300/80'}`}>
 								<div className="flex items-center gap-2 mb-1">
-									<Layers size={16} className={darkMode ? 'text-slate-400' : 'text-slate-500'} />
+									<Layers size={16} className={darkMode ? 'text-slate-400' : 'text-slate-500'} aria-hidden="true" />
 									<p className={`text-xs uppercase tracking-wider font-semibold ${darkMode ? 'text-slate-400' : 'text-slate-500'}`}>Core Stack</p>
 								</div>
 								<div className="flex flex-wrap gap-2">
@@ -550,7 +553,7 @@ const App = () => {
 										<div className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-teal-400 to-emerald-400 animate-pulse">
 											{experienceString}
 										</div>
-										<div className={`text-[9px] uppercase tracking-wider font-bold mt-1 ${darkMode ? 'text-blue-300/80' : 'text-blue-600/80'}`}>
+										<div className={`text-[9px] uppercase tracking-wider font-bold mt-1 ${darkMode ? 'text-blue-300' : 'text-blue-600'}`}>
 											Experience
 										</div>
 									</div>
@@ -565,16 +568,16 @@ const App = () => {
 										<div className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-emerald-400">
 											6
 										</div>
-										<div className={`text-[9px] uppercase tracking-wider font-bold mt-1 flex items-center justify-center gap-0.5 ${darkMode ? 'text-teal-300/80' : 'text-teal-600/80'}`}>
-											Projects (US
+										<div className={`text-[9px] uppercase tracking-wider font-bold mt-1 flex items-center justify-center gap-0.5 ${darkMode ? 'text-teal-300' : 'text-teal-600'}`}>
+											Projects
 											<img
 												src="https://flagcdn.com/16x12/us.png"
-												alt="US Flag"
+												alt="United States"
 												className="w-3 h-auto object-contain mx-0.5"
 												loading="lazy"
 												width="16"
 												height="12"
-											/>)
+											/>
 										</div>
 									</div>
 								</div>
@@ -588,8 +591,16 @@ const App = () => {
 										<div className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
 											4.0
 										</div>
-										<div className={`text-[9px] uppercase tracking-wider font-bold mt-1 ${darkMode ? 'text-purple-300/80' : 'text-purple-600/80'}`}>
+										<div className={`text-[9px] uppercase tracking-wider font-bold mt-1 flex items-center justify-center gap-0.5 ${darkMode ? 'text-purple-300' : 'text-purple-600'}`}>
 											GPA
+											<img
+												src="https://flagcdn.com/16x12/us.png"
+												alt="United States"
+												className="w-3 h-auto object-contain mx-0.5"
+												loading="lazy"
+												width="16"
+												height="12"
+											/>
 										</div>
 									</div>
 								</div>
@@ -616,11 +627,15 @@ const App = () => {
 									</div>
 									<h3 className="text-xl font-bold mb-4">{skill.category}</h3>
 									<div className="flex flex-wrap gap-2">
-										{skill.items.map((item, idx) => (
-											<span key={idx} className={`px-2.5 py-1 rounded-md text-sm font-medium ${darkMode ? 'bg-slate-700 text-slate-300' : 'bg-slate-300 text-slate-700'}`}>
-												{item}
-											</span>
-										))}
+										{skill.items.map((item, idx) => {
+											const [name, version] = typeof item === 'string' && item.includes('|') ? item.split('|').map(s => s.trim()) : [item, null];
+											return (
+												<span key={idx} className={`px-2.5 py-1 rounded-md text-sm font-medium ${darkMode ? 'bg-slate-700 text-slate-300' : 'bg-slate-300 text-slate-700'}`}>
+													{name}
+													{version && <span className={`ml-1 text-xs opacity-90 border-l pl-1 ${darkMode ? 'border-slate-500 text-blue-300' : 'border-slate-400 text-blue-700'}`}>{version}</span>}
+												</span>
+											);
+										})}
 									</div>
 								</div>
 							))}
@@ -649,15 +664,12 @@ const App = () => {
 											<span>{job.location}</span>
 											<img
 												src={`https://flagcdn.com/24x18/${job.countryCode}.png`}
-												alt={`Flag of ${job.countryCode === 'us' ? 'United States' : job.countryCode === 'bh' ? 'Bahrain' : 'Sudan'}`}
+												alt=""
 												className="w-5 h-auto object-contain inline-block"
 												loading="lazy"
 												width="24"
 												height="18"
 											/>
-										</div>
-										<div className={`text-xs mt-1 inline-block px-2 py-0.5 rounded ${darkMode ? 'bg-slate-800 text-slate-500' : 'bg-slate-200 text-slate-600'}`}>
-											{job.type}
 										</div>
 									</div>
 
@@ -669,7 +681,7 @@ const App = () => {
 										<div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
 											<div className="flex items-center gap-3">
 												<div className={`p-2 rounded-lg ${darkMode ? 'bg-slate-700' : 'bg-slate-300'}`}>
-													<Briefcase size={18} className="text-blue-500" />
+													<Briefcase size={18} className="text-blue-500" aria-hidden="true" />
 												</div>
 												<h3 className="text-xl font-bold">{job.role}</h3>
 											</div>
@@ -755,7 +767,7 @@ const App = () => {
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-12">
 						<div>
 							<div className="flex items-center gap-3 mb-8">
-								<GraduationCap className="w-8 h-8 text-blue-500" />
+								<GraduationCap className="w-8 h-8 text-blue-500" aria-hidden="true" />
 								<h2 className="text-3xl font-bold">Education</h2>
 							</div>
 							<div className="space-y-8">
@@ -765,14 +777,14 @@ const App = () => {
 										Jackson State University
 										<img
 											src="https://flagcdn.com/24x18/us.png"
-											alt="Flag of United States"
+											alt=""
 											className="w-5 h-auto object-contain inline-block"
 											loading="lazy"
 											width="24"
 											height="18"
 										/>
 									</p>
-									<div className="flex justify-between mt-2 text-sm text-slate-500">
+									<div className={`flex justify-between mt-2 text-sm ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
 										<span>2019 - 2021</span>
 										<span className="font-bold text-teal-400">GPA: 4.0 / 4</span>
 									</div>
@@ -783,14 +795,14 @@ const App = () => {
 										University of Khartoum
 										<img
 											src="https://flagcdn.com/24x18/sd.png"
-											alt="Flag of Sudan"
+											alt=""
 											className="w-5 h-auto object-contain inline-block"
 											loading="lazy"
 											width="24"
 											height="18"
 										/>
 									</p>
-									<div className="flex justify-between mt-2 text-sm text-slate-500">
+									<div className={`flex justify-between mt-2 text-sm ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
 										<span>2008 - 2013</span>
 										<span className="font-bold text-teal-400">CGPA: 3.2 / 4</span>
 									</div>
@@ -854,11 +866,11 @@ const App = () => {
 					<div className="max-w-[1600px] mx-auto text-center">
 						<h2 className="text-2xl font-bold mb-6">Ready to Drive Enterprise Success</h2>
 						<div className="flex justify-center gap-8 mb-8">
-							<a href="mailto:ahmed5_27@hotmail.com" className={`hover:text-blue-400 transition-colors ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
-								<Mail size={24} />
+							<a href="mailto:ahmed5_27@hotmail.com" aria-label="Contact Me" className={`hover:text-blue-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md p-1 ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
+								<Mail size={24} aria-hidden="true" />
 							</a>
-							<a href="https://www.linkedin.com/in/ahmed527" className={`hover:text-blue-400 transition-colors ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
-								<Linkedin size={24} />
+							<a href="https://www.linkedin.com/in/ahmed527" aria-label="LinkedIn Profile" target="_blank" rel="noopener noreferrer" className={`hover:text-blue-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md p-1 ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
+								<Linkedin size={24} aria-hidden="true" />
 							</a>
 						</div>
 						<p className={`text-sm ${darkMode ? 'text-slate-600' : 'text-slate-400'}`}>
@@ -866,7 +878,7 @@ const App = () => {
 						</p>
 					</div>
 				</footer>
-			</div>
+			</main>
 		</div>
 	);
 };
