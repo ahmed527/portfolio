@@ -176,7 +176,8 @@ const App = () => {
 			description: "MATP Mileage Reimbursement.",
 			achievements: [
 				"Develop and optimize secure, scalable web applications using .NET and Angular.",
-				"Implement RESTful APIs leveraging Azure services like (keyvalut, functions, redis cache, and storage account).",
+				"Leverage Azure services (Key Vault, Functions, Redis Cache, Storage Accounts, etc.) and integrate them with the application.",
+				"Implement user authentication using OAuth2, OIDC  and Siteminder.",
 				"Ensure WCAG 2.1 AA accessibility and compliance with state privacy regulations."
 			]
 		},
