@@ -191,7 +191,6 @@ const App = () => {
 				"Modernized eCIS projects implementing microservices architecture.",
 				"Developed .NET Web API with Oracle and MSSQL.",
 				"Optimized application architecture, significantly enhancing response times.",
-				"Supported CI/CD pipeline implementation in Azure DevOps."
 			]
 		},
 		{
