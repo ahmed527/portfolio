@@ -842,13 +842,33 @@ const App = () => {
 										</div>
 									</a>
 
+									<a
+										href="https://learn.microsoft.com/api/credentials/share/en-us/ahmed527/100CD05B8264058F?sharingId=46928C725D2B41FE"
+										target="_blank"
+										rel="noopener noreferrer"
+										className="flex gap-4 group cursor-pointer hover:opacity-80 transition-opacity"
+									>
+										<div className="w-12 h-12 rounded-full bg-blue-600/20 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+											<svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M5.89062 19.9531L13.0469 3.01562L16.9219 5.25L9.67188 22H5.03125L5.89062 19.9531Z" fill="#0078D4" />
+												<path d="M13.0469 3.01562L16.9219 5.25L13.5 13.5L13.0469 3.01562Z" fill="#3E9CD6" />
+												<path d="M19 22H9.67188L13.5 13.5L18.0625 22H19Z" fill="#3E9CD6" />
+												<path d="M18.0625 22L13.5 13.5L16.9219 5.25L23 21.1406L23.8281 22H18.0625Z" fill="#0078D4" />
+											</svg>
+										</div>
+										<div className="flex-1">
+											<div className="flex items-center gap-2">
+												<h3 className="font-bold text-lg group-hover:text-blue-400 transition-colors">Microsoft Certified: DevOps Engineer Expert</h3>
+												<ExternalLink className="w-4 h-4 text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+											</div>
+											<p className={`text-sm mt-1 ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>Expertise in DevOps practices, CI/CD pipelines, and infrastructure as code on Azure.</p>
+										</div>
+									</a>
+
 									<div className="pt-6 border-t border-slate-700/50">
 										<h4 className="text-sm uppercase tracking-wider font-semibold mb-4 text-slate-500">Currently Pursuing</h4>
 										<ul className="space-y-3">
-											<li className="flex items-center gap-2">
-												<div className="w-2 h-2 bg-yellow-500 rounded-full animate-pulse"></div>
-												<span>Azure DevOps Certification</span>
-											</li>
+
 											<li className="flex items-center gap-2">
 												<div className="w-2 h-2 bg-yellow-500 rounded-full animate-pulse"></div>
 												<span>Azure AI Certification</span>
