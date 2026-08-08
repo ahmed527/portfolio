@@ -825,14 +825,7 @@ const App = () => {
 										rel="noopener noreferrer"
 										className="flex gap-4 group cursor-pointer hover:opacity-80 transition-opacity"
 									>
-										<div className="w-12 h-12 rounded-full bg-blue-600/20 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-											<svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M5.89062 19.9531L13.0469 3.01562L16.9219 5.25L9.67188 22H5.03125L5.89062 19.9531Z" fill="#0078D4" />
-												<path d="M13.0469 3.01562L16.9219 5.25L13.5 13.5L13.0469 3.01562Z" fill="#3E9CD6" />
-												<path d="M19 22H9.67188L13.5 13.5L18.0625 22H19Z" fill="#3E9CD6" />
-												<path d="M18.0625 22L13.5 13.5L16.9219 5.25L23 21.1406L23.8281 22H18.0625Z" fill="#0078D4" />
-											</svg>
-										</div>
+										<img src="/portfolio/azure-associate-badge.svg" alt="Microsoft Certified Associate Badge" className="w-14 h-14 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
 										<div className="flex-1">
 											<div className="flex items-center gap-2">
 												<h3 className="font-bold text-lg group-hover:text-blue-400 transition-colors">Microsoft Certified: Azure Developer Associate</h3>
@@ -848,14 +841,7 @@ const App = () => {
 										rel="noopener noreferrer"
 										className="flex gap-4 group cursor-pointer hover:opacity-80 transition-opacity"
 									>
-										<div className="w-12 h-12 rounded-full bg-blue-600/20 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-											<svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M5.89062 19.9531L13.0469 3.01562L16.9219 5.25L9.67188 22H5.03125L5.89062 19.9531Z" fill="#0078D4" />
-												<path d="M13.0469 3.01562L16.9219 5.25L13.5 13.5L13.0469 3.01562Z" fill="#3E9CD6" />
-												<path d="M19 22H9.67188L13.5 13.5L18.0625 22H19Z" fill="#3E9CD6" />
-												<path d="M18.0625 22L13.5 13.5L16.9219 5.25L23 21.1406L23.8281 22H18.0625Z" fill="#0078D4" />
-											</svg>
-										</div>
+										<img src="/portfolio/azure-expert-badge.svg" alt="Microsoft Certified Expert Badge" className="w-14 h-14 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
 										<div className="flex-1">
 											<div className="flex items-center gap-2">
 												<h3 className="font-bold text-lg group-hover:text-blue-400 transition-colors">Microsoft Certified: DevOps Engineer Expert</h3>
