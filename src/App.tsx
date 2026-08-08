@@ -175,7 +175,7 @@ const App = () => {
 			countryCode: "us",
 			description: "MATP Mileage Reimbursement.",
 			achievements: [
-				"Develop and optimize secure, scalable web applications using .NET Core and Angular.",
+				"Develop and optimize secure, scalable web applications using .NET and Angular.",
 				"Implement RESTful APIs leveraging Azure services like (keyvalut, functions, redis cache, and storage account).",
 				"Ensure WCAG 2.1 AA accessibility and compliance with state privacy regulations."
 			]
@@ -254,7 +254,7 @@ const App = () => {
 			countryCode: "us",
 			description: "University Registration & Management Applications.",
 			achievements: [
-				"Led development of web-based registration apps using .NET MVC Core and Flutter.",
+				"Led development of web-based registration apps using .NET and Flutter.",
 				"Provided mentorship to junior developers on full-stack practices."
 			]
 		},
