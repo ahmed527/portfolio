@@ -295,7 +295,7 @@ const App = () => {
 			icon: <Shield className="w-6 h-6 text-teal-400" />,
 			tech: [".NET Core", "Angular", "Azure", "SQL", "Azure DevOps"],
 			details: [
-				"Develop and optimize .NET Core and Angular applications for PennDOT Medicaid and MATP reimbursement systems, ensuring high scalability, accessibility (WCAG 2.1 AA) and secure data exchange.",
+				"Develop and optimize .NET and Angular applications for PennDOT Medicaid and MATP reimbursement systems, ensuring high scalability, accessibility (WCAG 2.1 AA) and secure data exchange.",
 				"Implement security standards by integrating the application with SiteMinder using OpenID Connect and OAuth 2.0 with PKCE, enforcing strict access control policies."
 			]
 		},
