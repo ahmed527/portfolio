@@ -820,7 +820,7 @@ const App = () => {
 								<div className="space-y-6">
 
 									<a
-										href="https://learn.microsoft.com/en-us/users/ahmed527/credentials/1afcab418bea81f5?ref=https%3A%2F%2Fwww.linkedin.com%2F"
+										href="https://learn.microsoft.com/api/credentials/share/en-us/ahmed527/1AFCAB418BEA81F5?sharingId=46928C725D2B41FE"
 										target="_blank"
 										rel="noopener noreferrer"
 										className="flex gap-4 group cursor-pointer hover:opacity-80 transition-opacity"
