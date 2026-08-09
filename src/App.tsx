@@ -284,7 +284,8 @@ const App = () => {
 			achievements: [
 				"Built Electronic Cheque Clearing (ECC) and ERP platforms.",
 				"Managed full SDLC from requirement gathering to deployment and maintenance.",
-				"Designed secure backend architectures for enterprise apps."
+				"Designed secure backend architectures for enterprise apps.",
+				"Collaborated with clients to analyze business requirements, translating them into robust application features through iterative feedback loops."
 			]
 		}
 	];
