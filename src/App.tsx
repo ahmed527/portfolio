@@ -283,7 +283,7 @@ const App = () => {
 			description: "Banking & Enterprise Applications.",
 			achievements: [
 				"Built Electronic Cheque Clearing (ECC) and ERP platforms.",
-				"Managed full SDLC from requirement gathering to deployment.",
+				"Managed full SDLC from requirement gathering to deployment and maintenance.",
 				"Designed secure backend architectures for enterprise apps."
 			]
 		}
