@@ -189,8 +189,10 @@ const App = () => {
 			countryCode: "us",
 			description: "eCIS Modernization for the State of Pennsylvania.",
 			achievements: [
-				"Modernized eCIS projects implementing microservices architecture.",
+				"Modernized the COMPASS system by transitioning from a legacy .NET monolith to a highly scalable .NET microservices architecture.",
+				"Modernized the eCIS system from a legacy mainframe to a .NET architecture, enhancing scalability and significantly reducing processing time for large-scale datasets.",
 				"Developed .NET Web API with Oracle and MSSQL.",
+				"Implemented background jobs to process massive data efficiently at scale.",
 				"Optimized application architecture, significantly enhancing response times.",
 			]
 		},
