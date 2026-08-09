@@ -484,7 +484,7 @@ const App = () => {
 								<Linkedin size={20} aria-hidden="true" /> LinkedIn
 							</a>
 							<a
-								href="https://e.pcloud.link/publink/show?code=XZ6YroZjYEqjorDt3Fghl70Ohr8PuyxMQD7"
+								href="https://tinyurl.com/AhmedMaSoftwareDeveloperResume"
 								target="_blank"
 								rel="noopener noreferrer"
 								className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${darkMode ? 'border-slate-700 hover:bg-slate-800' : 'border-slate-200 hover:bg-slate-100'}`}>
