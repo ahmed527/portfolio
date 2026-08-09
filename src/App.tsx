@@ -187,7 +187,7 @@ const App = () => {
 			period: "Nov 2022 – Oct 2025",
 			location: "PA",
 			countryCode: "us",
-			description: "eCIS Modernization for the State of Pennsylvania.",
+			description: "COMPASS and eCIS Modernization for the State of Pennsylvania.",
 			achievements: [
 				"Modernized the COMPASS system by transitioning from a legacy .NET monolith to a highly scalable .NET microservices architecture.",
 				"Modernized the eCIS system from a legacy mainframe to a .NET architecture, enhancing scalability and significantly reducing processing time for large-scale datasets.",
