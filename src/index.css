@@ -1,5 +1,22 @@
 @import "tailwindcss";
 
+.print-wrapper {
+	display: block;
+	width: 100%;
+}
+
+.print-wrapper > tbody,
+.print-wrapper > tbody > tr,
+.print-wrapper > tbody > tr > td {
+	display: block;
+	width: 100%;
+}
+
+.print-header-space,
+.print-footer-space {
+	display: none;
+}
+
 /* ==========================================================================
    PRINT / PDF STYLES
    Optimized specifically for high-quality, professional PDF export and printing.
@@ -97,11 +114,54 @@
 	}
 
 	main#main-content {
-		padding: 10mm 14mm !important;
+		padding: 0 14mm !important;
 		margin: 0 auto !important;
 		box-sizing: border-box !important;
 		position: relative !important;
 		z-index: 10 !important;
+	}
+
+	.print-wrapper {
+		display: table !important;
+		width: 100% !important;
+		border-collapse: collapse !important;
+	}
+
+	.print-wrapper > tbody {
+		display: table-row-group !important;
+	}
+
+	.print-wrapper > tbody > tr {
+		display: table-row !important;
+	}
+
+	.print-wrapper > tbody > tr > td {
+		display: table-cell !important;
+		padding: 0 !important;
+	}
+
+	.print-header-space {
+		display: table-header-group !important;
+	}
+
+	.print-header-space th {
+		height: 12mm !important;
+		padding: 0 !important;
+		border: none !important;
+		font-size: 0 !important;
+		line-height: 0 !important;
+	}
+
+	.print-footer-space {
+		display: table-footer-group !important;
+	}
+
+	.print-footer-space td {
+		height: 10mm !important;
+		padding: 0 !important;
+		border: none !important;
+		font-size: 0 !important;
+		line-height: 0 !important;
 	}
 
 	h1, h2, h3, h4, h5, h6 {

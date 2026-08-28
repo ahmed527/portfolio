@@ -387,78 +387,88 @@ const App = () => {
 
 			{/* Main Content Wrapper - z-10 ensures it sits above the flag */}
 			<main id="main-content" className="relative z-10">
-				{/* Navigation */}
-				<nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? (darkMode ? 'bg-slate-900/90 shadow-lg backdrop-blur-md' : 'bg-slate-300/90 shadow-lg backdrop-blur-md') : 'bg-transparent'}`}>
-					<div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-						<div className="flex items-center justify-between h-16">
-							<div className="flex-shrink-0 font-bold text-2xl tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-400">
-								AM.
-							</div>
+				<table className="print-wrapper w-full border-collapse">
+					<thead className="print-header-space" aria-hidden="true">
+						<tr><th>&nbsp;</th></tr>
+					</thead>
+					<tfoot className="print-footer-space" aria-hidden="true">
+						<tr><td>&nbsp;</td></tr>
+					</tfoot>
+					<tbody>
+						<tr>
+							<td>
+								{/* Navigation */}
+								<nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? (darkMode ? 'bg-slate-900/90 shadow-lg backdrop-blur-md' : 'bg-slate-300/90 shadow-lg backdrop-blur-md') : 'bg-transparent'}`}>
+									<div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+										<div className="flex items-center justify-between h-16">
+											<div className="flex-shrink-0 font-bold text-2xl tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-400">
+												AM.
+											</div>
 
-							<div className="hidden md:block">
-								<div className="ml-10 flex items-baseline space-x-8">
-									{navLinks.map((link) => (
-										<a
-											key={link.name}
-											href={link.href}
-											className={`px-3 py-2 rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${activeSection === link.href.substring(1)
-												? 'text-blue-400'
-												: (darkMode ? 'text-slate-300 hover:text-white' : 'text-slate-600 hover:text-slate-900')
-												}`}
-										>
-											{link.name}
-										</a>
-									))}
-									<button
-										onClick={toggleTheme}
-										aria-label="Toggle theme"
-										className={`p-2 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${darkMode ? 'bg-slate-800 hover:bg-slate-700' : 'bg-slate-300 hover:bg-slate-300'}`}
-									>
-										{darkMode ? <Sun size={18} aria-hidden="true" /> : <Moon size={18} aria-hidden="true" />}
-									</button>
-								</div>
-							</div>
+											<div className="hidden md:block">
+												<div className="ml-10 flex items-baseline space-x-8">
+													{navLinks.map((link) => (
+														<a
+															key={link.name}
+															href={link.href}
+															className={`px-3 py-2 rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${activeSection === link.href.substring(1)
+																? 'text-blue-400'
+																: (darkMode ? 'text-slate-300 hover:text-white' : 'text-slate-600 hover:text-slate-900')
+																}`}
+														>
+															{link.name}
+														</a>
+													))}
+													<button
+														onClick={toggleTheme}
+														aria-label="Toggle theme"
+														className={`p-2 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${darkMode ? 'bg-slate-800 hover:bg-slate-700' : 'bg-slate-300 hover:bg-slate-300'}`}
+													>
+														{darkMode ? <Sun size={18} aria-hidden="true" /> : <Moon size={18} aria-hidden="true" />}
+													</button>
+												</div>
+											</div>
 
-							<div className="md:hidden flex items-center gap-4">
-								<button
-									onClick={toggleTheme}
-									aria-label="Toggle theme"
-									className={`p-2 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${darkMode ? 'bg-slate-800' : 'bg-slate-300'}`}
-								>
-									{darkMode ? <Sun size={18} aria-hidden="true" /> : <Moon size={18} aria-hidden="true" />}
-								</button>
-								<button
-									onClick={() => setIsMenuOpen(!isMenuOpen)}
-									aria-label="Toggle menu"
-									className={`inline-flex items-center justify-center p-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${darkMode ? 'text-slate-400 hover:text-white' : 'text-slate-600 hover:text-slate-900'}`}
-								>
-									{isMenuOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
-								</button>
-							</div>
-						</div>
-					</div>
+											<div className="md:hidden flex items-center gap-4">
+												<button
+													onClick={toggleTheme}
+													aria-label="Toggle theme"
+													className={`p-2 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${darkMode ? 'bg-slate-800' : 'bg-slate-300'}`}
+												>
+													{darkMode ? <Sun size={18} aria-hidden="true" /> : <Moon size={18} aria-hidden="true" />}
+												</button>
+												<button
+													onClick={() => setIsMenuOpen(!isMenuOpen)}
+													aria-label="Toggle menu"
+													className={`inline-flex items-center justify-center p-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${darkMode ? 'text-slate-400 hover:text-white' : 'text-slate-600 hover:text-slate-900'}`}
+												>
+													{isMenuOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
+												</button>
+											</div>
+										</div>
+									</div>
 
-					{/* Mobile menu */}
-					{isMenuOpen && (
-						<div className={`md:hidden ${darkMode ? 'bg-slate-900' : 'bg-slate-300'} border-b ${darkMode ? 'border-slate-800' : 'border-slate-400'}`}>
-							<div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-								{navLinks.map((link) => (
-									<a
-										key={link.name}
-										href={link.href}
-										onClick={() => setIsMenuOpen(false)}
-										className={`block px-3 py-2 rounded-md text-base font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${activeSection === link.href.substring(1)
-											? 'text-blue-400 bg-blue-400/10'
-											: (darkMode ? 'text-slate-300 hover:text-white' : 'text-slate-600 hover:text-slate-900')
-											}`}
-									>
-										{link.name}
-									</a>
-								))}
-							</div>
-						</div>
-					)}
-				</nav>
+									{/* Mobile menu */}
+									{isMenuOpen && (
+										<div className={`md:hidden ${darkMode ? 'bg-slate-900' : 'bg-slate-300'} border-b ${darkMode ? 'border-slate-800' : 'border-slate-400'}`}>
+											<div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+												{navLinks.map((link) => (
+													<a
+														key={link.name}
+														href={link.href}
+														onClick={() => setIsMenuOpen(false)}
+														className={`block px-3 py-2 rounded-md text-base font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${activeSection === link.href.substring(1)
+															? 'text-blue-400 bg-blue-400/10'
+															: (darkMode ? 'text-slate-300 hover:text-white' : 'text-slate-600 hover:text-slate-900')
+															}`}
+													>
+														{link.name}
+													</a>
+												))}
+											</div>
+										</div>
+									)}
+								</nav>
 
 				{/* Hero Section */}
 				<section id="home" className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-[1600px] mx-auto flex flex-col md:flex-row items-center gap-12">
@@ -869,23 +879,27 @@ const App = () => {
 					</div>
 				</section>
 
-				{/* Footer */}
-				<footer className={`py-12 px-4 border-t ${darkMode ? 'bg-slate-900 border-slate-800' : 'bg-slate-300 border-slate-400'}`}>
-					<div className="max-w-[1600px] mx-auto text-center">
-						<h2 className="text-2xl font-bold mb-6">Ready to Drive Enterprise Success</h2>
-						<div className="flex justify-center gap-8 mb-8">
-							<a href="mailto:ahmed5_27@hotmail.com" aria-label="Contact Me" className={`hover:text-blue-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md p-1 ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
-								<Mail size={24} aria-hidden="true" />
-							</a>
-							<a href="https://www.linkedin.com/in/ahmed527" aria-label="LinkedIn Profile" target="_blank" rel="noopener noreferrer" className={`hover:text-blue-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md p-1 ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
-								<Linkedin size={24} aria-hidden="true" />
-							</a>
-						</div>
-						<p className={`text-sm ${darkMode ? 'text-slate-600' : 'text-slate-400'}`}>
-							© {new Date().getFullYear()} Ahmed Mohammedali. All rights reserved.
-						</p>
-					</div>
-				</footer>
+								{/* Footer */}
+								<footer className={`py-12 px-4 border-t ${darkMode ? 'bg-slate-900 border-slate-800' : 'bg-slate-300 border-slate-400'}`}>
+									<div className="max-w-[1600px] mx-auto text-center">
+										<h2 className="text-2xl font-bold mb-6">Ready to Drive Enterprise Success</h2>
+										<div className="flex justify-center gap-8 mb-8">
+											<a href="mailto:ahmed5_27@hotmail.com" aria-label="Contact Me" className={`hover:text-blue-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md p-1 ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
+												<Mail size={24} aria-hidden="true" />
+											</a>
+											<a href="https://www.linkedin.com/in/ahmed527" aria-label="LinkedIn Profile" target="_blank" rel="noopener noreferrer" className={`hover:text-blue-400 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md p-1 ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
+												<Linkedin size={24} aria-hidden="true" />
+											</a>
+										</div>
+										<p className={`text-sm ${darkMode ? 'text-slate-600' : 'text-slate-400'}`}>
+											© {new Date().getFullYear()} Ahmed Mohammedali. All rights reserved.
+										</p>
+									</div>
+								</footer>
+							</td>
+						</tr>
+					</tbody>
+				</table>
 			</main>
 		</div>
 	);
