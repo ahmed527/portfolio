@@ -129,6 +129,17 @@ const App = () => {
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
 
+	useEffect(() => {
+		document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
+		if (darkMode) {
+			document.documentElement.classList.add('dark');
+			document.documentElement.classList.remove('light');
+		} else {
+			document.documentElement.classList.add('light');
+			document.documentElement.classList.remove('dark');
+		}
+	}, [darkMode]);
+
 	const toggleTheme = () => {
 		const newMode = !darkMode;
 		setDarkMode(newMode);
@@ -372,7 +383,7 @@ const App = () => {
 	const profileStack = ['.NET', 'Angular', 'React', 'Azure'];
 
 	return (
-		<div className={`min-h-screen relative transition-colors duration-300 ${darkMode ? 'bg-slate-900 text-slate-100' : 'bg-slate-300 text-slate-900'} font-sans`}>
+		<div data-theme={darkMode ? 'dark' : 'light'} className={`min-h-screen relative transition-colors duration-300 ${darkMode ? 'dark bg-slate-900 text-slate-100' : 'light bg-slate-300 text-slate-900'} font-sans`}>
 
 			{/* The Waving Flag Background */}
 			<FlagBackground />
