@@ -38,8 +38,24 @@
 	}
 
 	/* --------------------------------------------------------------------------
-	   1. Hide Interactive & Web-Only Elements
+	   1. Hide Interactive, Web-Only & Browser Extension Injected Elements
 	   -------------------------------------------------------------------------- */
+	/* Hide any element injected directly into body outside the React #root */
+	body > *:not(#root),
+	iframe,
+	embed,
+	object,
+	/* Target browser extension icons, RSS buttons, web clippers, feed finders */
+	[id*="rss" i], [class*="rss" i],
+	[id*="feed" i], [class*="feed" i],
+	[id*="extension" i], [class*="extension" i],
+	[id*="clipper" i], [class*="clipper" i],
+	[id*="reader" i], [class*="reader" i],
+	[data-rss], [data-feed], [data-extension],
+	div[style*="z-index: 2147483647"],
+	div[style*="z-index: 999999"],
+	div[style*="z-index: 99999"],
+	div[style*="z-index: 9999"],
 	nav,
 	a[href="#main-content"],
 	button[aria-label="Toggle theme"],
@@ -50,6 +66,8 @@
 	.blur-xl,
 	.lucide-external-link {
 		display: none !important;
+		visibility: hidden !important;
+		opacity: 0 !important;
 	}
 
 	/* Prevent default browser href printing after links */
