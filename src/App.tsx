@@ -10,7 +10,7 @@ import {
 
 const FlagBackground = () => {
 	return (
-		<div className="fixed inset-0 z-0 pointer-events-none overflow-hidden" aria-hidden="true">
+		<div className="fixed inset-0 z-0 pointer-events-none overflow-hidden flag-background" aria-hidden="true">
 			{/* CSS for custom animations */}
 			<style>
 				{`
@@ -35,7 +35,7 @@ const FlagBackground = () => {
 			</style>
 
 			{/* Base Container - Opacity control for subtlety */}
-			<div className="absolute inset-0 opacity-[0.04] dark:opacity-[0.06] transition-opacity duration-500">
+			<div className="absolute inset-0 opacity-[0.04] dark:opacity-[0.06] flag-container transition-opacity duration-500">
 
 				{/* 1. The Flag Construction */}
 				<div className="absolute inset-0 flex flex-col w-[150%] h-[120%] -left-[10%] -top-[10%] transform -rotate-2">

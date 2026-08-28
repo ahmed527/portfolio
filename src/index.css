@@ -8,7 +8,7 @@
 @media print {
 	@page {
 		size: letter portrait;
-		margin: 10mm 12mm;
+		margin: 0;
 	}
 
 	*, *::before, *::after {
@@ -19,14 +19,18 @@
 	}
 
 	html, body {
-		font-size: 11pt !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		width: 100% !important;
+		min-height: 100% !important;
+		font-size: 10.5pt !important;
 		line-height: 1.4 !important;
 		-webkit-print-color-adjust: exact !important;
 		print-color-adjust: exact !important;
 	}
 
 	/* --------------------------------------------------------------------------
-	   1. Hide Interactive, Web-Only & Browser Extension Injected Elements
+	   1. Hide Interactive, Navigation & Extension Elements
 	   -------------------------------------------------------------------------- */
 	body > *:not(#root),
 	iframe,
@@ -46,10 +50,8 @@
 	a[href="#main-content"],
 	button[aria-label="Toggle theme"],
 	button[aria-label="Toggle menu"],
-	.pointer-events-none,
 	.blur-3xl,
 	.blur-2xl,
-	.blur-xl,
 	.lucide-external-link {
 		display: none !important;
 		visibility: hidden !important;
@@ -62,12 +64,44 @@
 	}
 
 	/* --------------------------------------------------------------------------
-	   2. Layout, Structure & Spacing Defaults
+	   2. Flag Background in Print
 	   -------------------------------------------------------------------------- */
-	#root, main, div[class*="min-h-screen"] {
-		padding: 0 !important;
+	.flag-background {
+		display: block !important;
+		position: fixed !important;
+		inset: 0 !important;
+		width: 100% !important;
+		height: 100% !important;
+		z-index: 0 !important;
+		overflow: hidden !important;
+		pointer-events: none !important;
+		-webkit-print-color-adjust: exact !important;
+		print-color-adjust: exact !important;
+	}
+
+	.flag-container {
+		opacity: 0.08 !important;
+		-webkit-print-color-adjust: exact !important;
+		print-color-adjust: exact !important;
+	}
+
+	/* --------------------------------------------------------------------------
+	   3. Layout, Structure & Spacing Defaults (Full Bleed)
+	   -------------------------------------------------------------------------- */
+	#root, div[class*="min-h-screen"] {
+		width: 100% !important;
+		min-height: 100vh !important;
 		margin: 0 !important;
-		min-height: auto !important;
+		padding: 0 !important;
+		box-sizing: border-box !important;
+	}
+
+	main#main-content {
+		padding: 10mm 14mm !important;
+		margin: 0 auto !important;
+		box-sizing: border-box !important;
+		position: relative !important;
+		z-index: 10 !important;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -512,7 +546,7 @@
 	}
 
 	/* ==========================================================================
-	   3. LIGHT THEME PRINT COLORS (Active when light mode is selected)
+	   4. LIGHT THEME PRINT COLORS (Full Bleed, Soft Slate Palette)
 	   ========================================================================== */
 	html[data-theme="light"],
 	html[data-theme="light"] body,
@@ -521,9 +555,9 @@
 	[data-theme="light"],
 	[data-theme="light"] #root,
 	[data-theme="light"] main {
-		background: #ffffff !important;
-		background-color: #ffffff !important;
-		color: #1e293b !important;
+		background: #cbd5e1 !important;
+		background-color: #cbd5e1 !important;
+		color: #0f172a !important;
 	}
 
 	[data-theme="light"] h1,
@@ -549,13 +583,13 @@
 	}
 
 	[data-theme="light"] #home {
-		border-bottom: 1px solid #e2e8f0 !important;
+		border-bottom: 1px solid #94a3b8 !important;
 	}
 
 	[data-theme="light"] #home .inline-block.rounded-full {
-		background: #f0fdf4 !important;
+		background: #dcfce7 !important;
 		color: #15803d !important;
-		border: 1px solid #bbf7d0 !important;
+		border: 1px solid #86efac !important;
 	}
 
 	[data-theme="light"] #home h1 span {
@@ -568,33 +602,33 @@
 	[data-theme="light"] #home p span.text-emerald-400 { color: #059669 !important; }
 
 	[data-theme="light"] #home .flex-wrap.gap-4 a {
-		background: #f8fafc !important;
+		background: #e2e8f0 !important;
 		color: #0f172a !important;
-		border: 1px solid #cbd5e1 !important;
+		border: 1px solid #94a3b8 !important;
 	}
 	[data-theme="light"] #home .flex-wrap.gap-4 a svg { color: #0284c7 !important; }
 	[data-theme="light"] #home .flex.items-center.gap-6 { color: #475569 !important; }
 
 	[data-theme="light"] #home > div:last-child > div.relative {
-		background: #f8fafc !important;
-		border: 1px solid #cbd5e1 !important;
+		background: #e2e8f0 !important;
+		border: 1px solid #94a3b8 !important;
 	}
 	[data-theme="light"] #home .border-dashed p {
 		color: #0284c7 !important;
 		-webkit-text-fill-color: #0284c7 !important;
 	}
 	[data-theme="light"] #home .rounded-xl {
-		background: #ffffff !important;
-		border: 1px solid #e2e8f0 !important;
+		background: #cbd5e1 !important;
+		border: 1px solid #94a3b8 !important;
 	}
 	[data-theme="light"] #home .rounded-md {
-		background: #f1f5f9 !important;
+		background: #e2e8f0 !important;
 		color: #0369a1 !important;
-		border: 1px solid #cbd5e1 !important;
+		border: 1px solid #94a3b8 !important;
 	}
 	[data-theme="light"] #home .grid-cols-3 > div {
-		background: #ffffff !important;
-		border: 1px solid #cbd5e1 !important;
+		background: #e2e8f0 !important;
+		border: 1px solid #94a3b8 !important;
 	}
 	[data-theme="light"] #home .grid-cols-3 .text-2xl {
 		color: #0284c7 !important;
@@ -602,27 +636,27 @@
 	}
 
 	[data-theme="light"] #skills .rounded-2xl.border {
-		background: #f8fafc !important;
-		border: 1px solid #cbd5e1 !important;
+		background: #e2e8f0 !important;
+		border: 1px solid #94a3b8 !important;
 	}
 	[data-theme="light"] #skills .w-12.h-12 {
-		background: #e0f2fe !important;
+		background: #bae6fd !important;
 		color: #0284c7 !important;
 	}
 	[data-theme="light"] #skills span.rounded-md {
-		background: #ffffff !important;
+		background: #cbd5e1 !important;
 		color: #1e293b !important;
-		border: 1px solid #cbd5e1 !important;
+		border: 1px solid #94a3b8 !important;
 	}
 
 	[data-theme="light"] #experience .md\:w-\[180px\] {
-		border-right: 2px solid #cbd5e1 !important;
+		border-right: 2px solid #94a3b8 !important;
 	}
 	[data-theme="light"] #experience .font-bold.text-blue-400 { color: #0284c7 !important; }
-	[data-theme="light"] #experience .md\:w-\[180px\] .text-sm { color: #64748b !important; }
+	[data-theme="light"] #experience .md\:w-\[180px\] .text-sm { color: #475569 !important; }
 	[data-theme="light"] #experience .flex-1.p-6 {
-		background: #f8fafc !important;
-		border: 1px solid #cbd5e1 !important;
+		background: #e2e8f0 !important;
+		border: 1px solid #94a3b8 !important;
 	}
 	[data-theme="light"] #experience .text-teal-400,
 	[data-theme="light"] #experience .text-teal-700 { color: #0f766e !important; }
@@ -630,44 +664,44 @@
 	[data-theme="light"] #experience li svg { color: #0284c7 !important; }
 
 	[data-theme="light"] #projects .group.relative {
-		background: #f8fafc !important;
-		border: 1px solid #cbd5e1 !important;
+		background: #e2e8f0 !important;
+		border: 1px solid #94a3b8 !important;
 	}
 	[data-theme="light"] #projects .text-sm.font-medium { color: #475569 !important; }
 	[data-theme="light"] #projects .text-xs.font-bold.tracking-wider {
-		background: #e0f2fe !important;
+		background: #bae6fd !important;
 		color: #0369a1 !important;
-		border: 1px solid #bae6fd !important;
+		border: 1px solid #7dd3fc !important;
 	}
 	[data-theme="light"] #projects li > div { background: #0284c7 !important; }
 	[data-theme="light"] #projects span.rounded-full {
-		background: #ffffff !important;
-		color: #475569 !important;
-		border: 1px solid #cbd5e1 !important;
+		background: #cbd5e1 !important;
+		color: #334155 !important;
+		border: 1px solid #94a3b8 !important;
 	}
 
 	[data-theme="light"] #education a.rounded-2xl {
-		background: #f8fafc !important;
-		border: 1px solid #cbd5e1 !important;
+		background: #e2e8f0 !important;
+		border: 1px solid #94a3b8 !important;
 	}
 	[data-theme="light"] #education a.rounded-2xl p { color: #475569 !important; }
 	[data-theme="light"] #education .p-5.rounded-2xl {
-		background: #f8fafc !important;
-		border: 1px solid #cbd5e1 !important;
+		background: #e2e8f0 !important;
+		border: 1px solid #94a3b8 !important;
 	}
 	[data-theme="light"] #education .grid.grid-cols-1.md\:grid-cols-2:last-child > div {
-		background: #f8fafc !important;
-		border: 1px solid #cbd5e1 !important;
+		background: #e2e8f0 !important;
+		border: 1px solid #94a3b8 !important;
 	}
 
 	[data-theme="light"] footer {
-		border-top: 1px solid #cbd5e1 !important;
-		color: #64748b !important;
+		border-top: 1px solid #94a3b8 !important;
+		color: #475569 !important;
 	}
-	[data-theme="light"] footer p { color: #64748b !important; }
+	[data-theme="light"] footer p { color: #475569 !important; }
 
 	/* ==========================================================================
-	   4. DARK THEME PRINT COLORS (Active when dark mode is selected)
+	   5. DARK THEME PRINT COLORS (Full Bleed, Deep Slate Navy Palette)
 	   ========================================================================== */
 	html[data-theme="dark"],
 	html[data-theme="dark"] body,
