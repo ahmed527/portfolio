@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import {
 	Menu, X, Linkedin, Mail, Phone, MapPin,
 	ChevronRight, Database,
@@ -85,7 +85,21 @@ const App = () => {
 		return saved ? saved === 'dark' : true; // Default to dark mode
 	});
 	const [scrolled, setScrolled] = useState(false);
-	const [experienceString, setExperienceString] = useState('');
+
+	const experienceString = useMemo(() => {
+		const startDate = new Date('2017-05-01');
+		const now = new Date();
+
+		let years = now.getFullYear() - startDate.getFullYear();
+		let months = now.getMonth() - startDate.getMonth();
+
+		if (months < 0) {
+			years -= 1;
+			months += 12;
+		}
+
+		return months === 0 ? `${years} y` : `${years} y, ${months} m`;
+	}, []);
 
 	useEffect(() => {
 		// Scroll handler
@@ -105,27 +119,6 @@ const App = () => {
 		};
 
 		window.addEventListener('scroll', handleScroll);
-
-		// Experience Calculation
-		const startDate = new Date('2017-05-01');
-		const now = new Date();
-
-		let years = now.getFullYear() - startDate.getFullYear();
-		let months = now.getMonth() - startDate.getMonth();
-
-		// Adjust for negative month difference
-		if (months < 0) {
-			years -= 1;
-			months += 12;
-		}
-
-		// Format string: Hide months if 0
-		if (months === 0) {
-			setExperienceString(`${years} y`);
-		} else {
-			setExperienceString(`${years} y, ${months} m`);
-		}
-
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
 
