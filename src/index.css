@@ -1,22 +1,5 @@
 @import "tailwindcss";
 
-.print-wrapper {
-	display: block;
-	width: 100%;
-}
-
-.print-wrapper > tbody,
-.print-wrapper > tbody > tr,
-.print-wrapper > tbody > tr > td {
-	display: block;
-	width: 100%;
-}
-
-.print-header-space,
-.print-footer-space {
-	display: none;
-}
-
 /* ==========================================================================
    PRINT / PDF STYLES
    Optimized specifically for high-quality, professional PDF export and printing.
@@ -40,8 +23,8 @@
 		padding: 0 !important;
 		width: 100% !important;
 		min-height: 100% !important;
-		font-size: 10.5pt !important;
-		line-height: 1.4 !important;
+		font-size: 10pt !important;
+		line-height: 1.35 !important;
 		-webkit-print-color-adjust: exact !important;
 		print-color-adjust: exact !important;
 	}
@@ -49,30 +32,28 @@
 	/* --------------------------------------------------------------------------
 	   1. Hide Interactive, Navigation & Extension Elements
 	   -------------------------------------------------------------------------- */
-	body > *:not(#root),
-	iframe,
-	embed,
-	object,
-	[id*="rss" i], [class*="rss" i],
-	[id*="feed" i], [class*="feed" i],
-	[id*="extension" i], [class*="extension" i],
-	[id*="clipper" i], [class*="clipper" i],
-	[id*="reader" i], [class*="reader" i],
-	[data-rss], [data-feed], [data-extension],
-	div[style*="z-index: 2147483647"],
-	div[style*="z-index: 999999"],
-	div[style*="z-index: 99999"],
-	div[style*="z-index: 9999"],
 	nav,
+	header,
+	.print\:hidden,
 	a[href="#main-content"],
 	button[aria-label="Toggle theme"],
 	button[aria-label="Toggle menu"],
 	.blur-3xl,
 	.blur-2xl,
-	.lucide-external-link {
+	.lucide-external-link,
+	body > *:not(#root),
+	iframe,
+	embed,
+	object {
 		display: none !important;
 		visibility: hidden !important;
 		opacity: 0 !important;
+		height: 0 !important;
+		max-height: 0 !important;
+		overflow: hidden !important;
+		position: absolute !important;
+		top: -9999px !important;
+		pointer-events: none !important;
 	}
 
 	/* Prevent default browser href printing after links */
@@ -81,14 +62,16 @@
 	}
 
 	/* --------------------------------------------------------------------------
-	   2. Flag Background in Print
+	   2. Flag Background in Print (Full Bleed Edge-to-Edge)
 	   -------------------------------------------------------------------------- */
 	.flag-background {
 		display: block !important;
 		position: fixed !important;
 		inset: 0 !important;
-		width: 100% !important;
-		height: 100% !important;
+		top: 0 !important;
+		left: 0 !important;
+		width: 100vw !important;
+		height: 100vh !important;
 		z-index: 0 !important;
 		overflow: hidden !important;
 		pointer-events: none !important;
@@ -103,9 +86,11 @@
 	}
 
 	/* --------------------------------------------------------------------------
-	   3. Layout, Structure & Spacing Defaults (Full Bleed)
+	   3. Layout, Structure & Spacing Defaults (Full Bleed with Content Margins)
 	   -------------------------------------------------------------------------- */
-	#root, div[class*="min-h-screen"] {
+	#root,
+	div[data-theme],
+	div[class*="min-h-screen"] {
 		width: 100% !important;
 		min-height: 100vh !important;
 		margin: 0 !important;
@@ -114,54 +99,14 @@
 	}
 
 	main#main-content {
-		padding: 0 14mm !important;
+		width: 100% !important;
+		max-width: 100% !important;
 		margin: 0 auto !important;
+		padding: 0 14mm !important;
 		box-sizing: border-box !important;
 		position: relative !important;
 		z-index: 10 !important;
-	}
-
-	.print-wrapper {
-		display: table !important;
-		width: 100% !important;
-		border-collapse: collapse !important;
-	}
-
-	.print-wrapper > tbody {
-		display: table-row-group !important;
-	}
-
-	.print-wrapper > tbody > tr {
-		display: table-row !important;
-	}
-
-	.print-wrapper > tbody > tr > td {
-		display: table-cell !important;
-		padding: 0 !important;
-	}
-
-	.print-header-space {
-		display: table-header-group !important;
-	}
-
-	.print-header-space th {
-		height: 12mm !important;
-		padding: 0 !important;
-		border: none !important;
-		font-size: 0 !important;
-		line-height: 0 !important;
-	}
-
-	.print-footer-space {
-		display: table-footer-group !important;
-	}
-
-	.print-footer-space td {
-		height: 10mm !important;
-		padding: 0 !important;
-		border: none !important;
-		font-size: 0 !important;
-		line-height: 0 !important;
+		display: block !important;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -174,29 +119,31 @@
 	section > div > div.text-center,
 	section > div.mb-16 {
 		text-align: left !important;
-		margin-bottom: 0.75rem !important;
+		margin-bottom: 0.5rem !important;
 		page-break-after: avoid !important;
 		break-after: avoid !important;
 	}
 
 	.w-20.h-1 {
-		margin: 0.2rem 0 0.4rem 0 !important;
+		margin: 0.15rem 0 0.3rem 0 !important;
 		width: 2.5rem !important;
 		height: 3px !important;
 		-webkit-print-color-adjust: exact !important;
 		print-color-adjust: exact !important;
 	}
 
-	/* Hero Section */
+	/* ==========================================================================
+	   PAGE 1: HERO & TECHNICAL ARSENAL
+	   ========================================================================== */
 	#home {
-		padding-top: 0 !important;
-		padding-bottom: 1.25rem !important;
-		margin-bottom: 0.75rem !important;
+		padding-top: 12mm !important;
+		padding-bottom: 0.65rem !important;
+		margin-bottom: 1.6rem !important;
 		display: flex !important;
 		flex-direction: row !important;
 		align-items: stretch !important;
 		justify-content: space-between !important;
-		gap: 1.5rem !important;
+		gap: 1.25rem !important;
 		page-break-inside: avoid !important;
 		break-inside: avoid !important;
 	}
@@ -390,12 +337,14 @@
 		white-space: nowrap !important;
 	}
 
-	/* Skills Section */
+	/* Skills Section (Technical Arsenal) */
 	#skills {
-		padding: 0.75rem 0 !important;
+		padding: 2.8rem 0 0.4rem 0 !important;
 		background: transparent !important;
 		page-break-inside: avoid !important;
 		break-inside: avoid !important;
+		page-break-after: always !important;
+		break-after: page !important;
 	}
 
 	#skills .grid {
@@ -439,23 +388,38 @@
 		print-color-adjust: exact !important;
 	}
 
-	/* Experience Section */
+	/* ==========================================================================
+	   PAGE 2 & PAGE 3: PROFESSIONAL JOURNEY
+	   ========================================================================== */
 	#experience {
-		padding: 0.75rem 0 !important;
+		padding-top: 14mm !important;
+		padding-bottom: 0.4rem !important;
 		background: transparent !important;
+		page-break-before: always !important;
+		break-before: page !important;
 	}
 
 	#experience .space-y-12 {
 		display: flex !important;
 		flex-direction: column !important;
-		gap: 0.75rem !important;
-		margin-top: 0.5rem !important;
+		gap: 0.65rem !important;
+		margin-top: 0.4rem !important;
 	}
 
 	#experience .space-y-12 > div {
 		padding-left: 0 !important;
 		page-break-inside: avoid !important;
 		break-inside: avoid !important;
+	}
+
+	/* Page break after Job 4 so Jobs 5-9 start cleanly on Page 3 with 14mm top margin */
+	#experience .space-y-12 > div:nth-child(4) {
+		page-break-after: always !important;
+		break-after: page !important;
+	}
+
+	#experience .space-y-12 > div:nth-child(5) {
+		padding-top: 14mm !important;
 	}
 
 	#experience .hidden.md\:block.absolute,
@@ -516,18 +480,32 @@
 		margin-top: 2px !important;
 	}
 
-	/* Featured Projects Section */
+	/* ==========================================================================
+	   PAGE 4: FEATURED PROJECTS (Header + all 6 projects on 1 page)
+	   ========================================================================== */
 	#projects {
-		padding: 0.75rem 0 !important;
+		padding-top: 12mm !important;
+		padding-bottom: 0.4rem !important;
 		background: transparent !important;
-		break-before: page !important;
 		page-break-before: always !important;
+		break-before: page !important;
+		page-break-after: always !important;
+		break-after: page !important;
+		page-break-inside: avoid !important;
+		break-inside: avoid !important;
+	}
+
+	#projects > div {
+		page-break-inside: avoid !important;
+		break-inside: avoid !important;
 	}
 
 	#projects .grid {
 		grid-template-columns: repeat(2, 1fr) !important;
-		gap: 0.75rem !important;
+		gap: 0.85rem !important;
 		display: grid !important;
+		page-break-inside: avoid !important;
+		break-inside: avoid !important;
 	}
 
 	#projects .group.relative {
@@ -539,50 +517,59 @@
 	}
 
 	#projects .p-8 {
-		padding: 0.7rem 0.8rem !important;
+		padding: 0.5rem 0.7rem !important;
 	}
 
 	#projects h3 {
-		font-size: 0.95rem !important;
+		font-size: 0.88rem !important;
 	}
 
 	#projects .text-sm.font-medium {
-		font-size: 0.75rem !important;
-		margin-bottom: 0.3rem !important;
+		font-size: 0.70rem !important;
+		margin-bottom: 0.2rem !important;
 	}
 
 	#projects .text-xs.font-bold.tracking-wider {
-		font-size: 0.65rem !important;
-		padding: 0.1rem 0.35rem !important;
+		font-size: 0.60rem !important;
+		padding: 0.08rem 0.3rem !important;
 		-webkit-print-color-adjust: exact !important;
 		print-color-adjust: exact !important;
+	}
+
+	#projects .mb-6 {
+		margin-bottom: 0.35rem !important;
 	}
 
 	#projects ul {
-		margin-bottom: 0.4rem !important;
+		margin-bottom: 0.25rem !important;
 	}
 
 	#projects li {
-		font-size: 0.73rem !important;
-		line-height: 1.35 !important;
+		font-size: 0.68rem !important;
+		line-height: 1.25 !important;
 	}
 
 	#projects span.rounded-full {
-		font-size: 0.65rem !important;
-		padding: 0.08rem 0.35rem !important;
+		font-size: 0.60rem !important;
+		padding: 0.05rem 0.3rem !important;
 		-webkit-print-color-adjust: exact !important;
 		print-color-adjust: exact !important;
 	}
 
-	/* Certifications & Education Section */
+	/* ==========================================================================
+	   PAGE 5: CERTIFICATIONS, EDUCATION & FOOTER
+	   ========================================================================== */
 	#education {
-		padding: 0.75rem 0 !important;
+		padding-top: 14mm !important;
+		padding-bottom: 0.4rem !important;
 		background: transparent !important;
+		page-break-before: always !important;
+		break-before: page !important;
 	}
 
 	#education .grid {
 		grid-template-columns: repeat(2, 1fr) !important;
-		gap: 0.75rem !important;
+		gap: 0.65rem !important;
 		display: grid !important;
 	}
 
@@ -611,7 +598,7 @@
 
 	#education .p-5.rounded-2xl {
 		padding: 0.35rem 0.75rem !important;
-		margin-bottom: 0.85rem !important;
+		margin-bottom: 0.65rem !important;
 		border-radius: 8px !important;
 		page-break-inside: avoid !important;
 		break-inside: avoid !important;
@@ -634,8 +621,8 @@
 
 	/* Footer */
 	footer {
-		padding: 0.65rem 0 !important;
-		margin-top: 0.85rem !important;
+		padding: 0.5rem 0 !important;
+		margin-top: 0.65rem !important;
 		background: transparent !important;
 		page-break-inside: avoid !important;
 		break-inside: avoid !important;
@@ -656,7 +643,7 @@
 	}
 
 	/* ==========================================================================
-	   4. LIGHT THEME PRINT COLORS (Full Bleed, Soft Slate Palette)
+	   LIGHT THEME PRINT COLORS (Full Bleed, Soft Slate Palette)
 	   ========================================================================== */
 	html[data-theme="light"],
 	html[data-theme="light"] body,
@@ -811,7 +798,7 @@
 	[data-theme="light"] footer p { color: #475569 !important; }
 
 	/* ==========================================================================
-	   5. DARK THEME PRINT COLORS (Full Bleed, Deep Slate Navy Palette)
+	   DARK THEME PRINT COLORS (Full Bleed, Deep Slate Navy Palette)
 	   ========================================================================== */
 	html[data-theme="dark"],
 	html[data-theme="dark"] body,
