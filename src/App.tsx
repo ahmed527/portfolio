@@ -140,7 +140,7 @@ const App = () => {
 		{ name: 'Skills', href: '#skills' },
 		{ name: 'Experience', href: '#experience' },
 		{ name: 'Projects', href: '#projects' },
-		{ name: 'Education', href: '#education' },
+		{ name: 'Certifications & Education', href: '#education' },
 	];
 
 	const skills = [
@@ -372,7 +372,7 @@ const App = () => {
 	const profileStack = ['.NET', 'Angular', 'React', 'Azure'];
 
 	return (
-		<div className={`min-h-screen relative transition-colors duration-300 ${darkMode ? 'bg-slate-900 text-slate-100' : 'bg-slate-200 text-slate-900'} font-sans`}>
+		<div className={`min-h-screen relative transition-colors duration-300 ${darkMode ? 'bg-slate-900 text-slate-100' : 'bg-slate-300 text-slate-900'} font-sans`}>
 
 			{/* The Waving Flag Background */}
 			<FlagBackground />
@@ -384,7 +384,7 @@ const App = () => {
 			{/* Main Content Wrapper - z-10 ensures it sits above the flag */}
 			<main id="main-content" className="relative z-10">
 				{/* Navigation */}
-				<nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? (darkMode ? 'bg-slate-900/90 shadow-lg backdrop-blur-md' : 'bg-slate-200/90 shadow-lg backdrop-blur-md') : 'bg-transparent'}`}>
+				<nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? (darkMode ? 'bg-slate-900/90 shadow-lg backdrop-blur-md' : 'bg-slate-300/90 shadow-lg backdrop-blur-md') : 'bg-transparent'}`}>
 					<div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
 						<div className="flex items-center justify-between h-16">
 							<div className="flex-shrink-0 font-bold text-2xl tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-400">
@@ -408,7 +408,7 @@ const App = () => {
 									<button
 										onClick={toggleTheme}
 										aria-label="Toggle theme"
-										className={`p-2 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${darkMode ? 'bg-slate-800 hover:bg-slate-700' : 'bg-slate-200 hover:bg-slate-300'}`}
+										className={`p-2 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${darkMode ? 'bg-slate-800 hover:bg-slate-700' : 'bg-slate-300 hover:bg-slate-300'}`}
 									>
 										{darkMode ? <Sun size={18} aria-hidden="true" /> : <Moon size={18} aria-hidden="true" />}
 									</button>
@@ -419,7 +419,7 @@ const App = () => {
 								<button
 									onClick={toggleTheme}
 									aria-label="Toggle theme"
-									className={`p-2 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${darkMode ? 'bg-slate-800' : 'bg-slate-200'}`}
+									className={`p-2 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${darkMode ? 'bg-slate-800' : 'bg-slate-300'}`}
 								>
 									{darkMode ? <Sun size={18} aria-hidden="true" /> : <Moon size={18} aria-hidden="true" />}
 								</button>
@@ -436,7 +436,7 @@ const App = () => {
 
 					{/* Mobile menu */}
 					{isMenuOpen && (
-						<div className={`md:hidden ${darkMode ? 'bg-slate-900' : 'bg-slate-200'} border-b ${darkMode ? 'border-slate-800' : 'border-slate-400'}`}>
+						<div className={`md:hidden ${darkMode ? 'bg-slate-900' : 'bg-slate-300'} border-b ${darkMode ? 'border-slate-800' : 'border-slate-400'}`}>
 							<div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
 								{navLinks.map((link) => (
 									<a
@@ -507,7 +507,7 @@ const App = () => {
 						<div className={`absolute inset-0 bg-gradient-to-r from-blue-500 to-teal-500 rounded-2xl blur-3xl opacity-20 group-hover:opacity-30 transition-opacity duration-500`}></div>
 
 						{/* New Profile Card Visual */}
-						<div className={`relative w-full aspect-square rounded-2xl border ${darkMode ? 'bg-slate-800/40 border-slate-700/50' : 'bg-slate-100/90 border-slate-400'} backdrop-blur-xl p-8 flex flex-col justify-center gap-6 shadow-2xl`}>
+						<div className={`relative w-full aspect-square rounded-2xl border ${darkMode ? 'bg-slate-800/40 border-slate-700/50' : 'bg-slate-200/90 border-slate-400'} backdrop-blur-xl p-8 flex flex-col justify-center gap-6 shadow-2xl`}>
 
 							{/* Header / Avatar Area */}
 							<div className="flex items-center gap-5 pb-6 border-b border-dashed border-slate-500/30">
@@ -539,7 +539,7 @@ const App = () => {
 								</div>
 								<div className="flex flex-wrap gap-2">
 									{profileStack.map((tech, i) => (
-										<span key={i} className={`px-3 py-1.5 rounded-md text-sm font-semibold shadow-sm ${darkMode ? 'bg-slate-800 text-blue-300 border border-slate-600' : 'bg-slate-100 text-blue-600 border border-slate-400'}`}>
+										<span key={i} className={`px-3 py-1.5 rounded-md text-sm font-semibold shadow-sm ${darkMode ? 'bg-slate-800 text-blue-300 border border-slate-600' : 'bg-slate-200 text-blue-600 border border-slate-400'}`}>
 											{tech}
 										</span>
 									))}
@@ -625,7 +625,7 @@ const App = () => {
 
 						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 							{skills.map((skill, index) => (
-								<div key={index} className={`p-6 rounded-2xl border transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${darkMode ? 'bg-slate-800 border-slate-700 hover:border-blue-500/50' : 'bg-slate-100 border-slate-400 hover:border-blue-400/50'}`}>
+								<div key={index} className={`p-6 rounded-2xl border transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${darkMode ? 'bg-slate-800 border-slate-700 hover:border-blue-500/50' : 'bg-slate-200 border-slate-400 hover:border-blue-400/50'}`}>
 									<div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-6 ${darkMode ? 'bg-slate-700 text-blue-400' : 'bg-blue-50 text-blue-600'}`}>
 										{skill.icon}
 									</div>
@@ -678,10 +678,10 @@ const App = () => {
 									</div>
 
 									{/* Timeline Dot */}
-									<div className={`absolute left-[-37px] md:left-[195px] top-1.5 w-3 h-3 rounded-full border-2 ${darkMode ? 'bg-slate-900 border-blue-500' : 'bg-slate-200 border-blue-500'} z-10`}></div>
+									<div className={`absolute left-[-37px] md:left-[195px] top-1.5 w-3 h-3 rounded-full border-2 ${darkMode ? 'bg-slate-900 border-blue-500' : 'bg-slate-300 border-blue-500'} z-10`}></div>
 
 									{/* Content Card */}
-									<div className={`flex-1 p-6 rounded-2xl border transition-all ${darkMode ? 'bg-slate-800/50 border-slate-700 hover:bg-slate-800' : 'bg-slate-100 border-slate-400 hover:shadow-lg'}`}>
+									<div className={`flex-1 p-6 rounded-2xl border transition-all ${darkMode ? 'bg-slate-800/50 border-slate-700 hover:bg-slate-800' : 'bg-slate-200 border-slate-400 hover:shadow-lg'}`}>
 										<div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
 											<div className="flex items-center gap-3">
 												<div className={`p-2 rounded-lg ${darkMode ? 'bg-slate-700' : 'bg-slate-300'}`}>
@@ -720,7 +720,7 @@ const App = () => {
 
 						<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 							{projects.map((project, index) => (
-								<div key={index} className={`group relative rounded-2xl overflow-hidden border transition-all duration-300 hover:shadow-2xl ${darkMode ? 'bg-slate-800 border-slate-700' : 'bg-slate-100 border-slate-400'}`}>
+								<div key={index} className={`group relative rounded-2xl overflow-hidden border transition-all duration-300 hover:shadow-2xl ${darkMode ? 'bg-slate-800 border-slate-700' : 'bg-slate-200 border-slate-400'}`}>
 									<div className={`h-2 w-full bg-gradient-to-r ${index % 2 === 0 ? 'from-blue-500 to-teal-500' : 'from-purple-500 to-pink-500'}`}></div>
 									<div className="p-8 flex flex-col h-full">
 										<div className="flex justify-between items-start mb-2">
@@ -766,113 +766,107 @@ const App = () => {
 					</div>
 				</section>
 
-				{/* Education & Certs */}
+				{/* Certifications & Education */}
 				<section id="education" className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-						<div>
-							<div className="flex items-center gap-3 mb-8">
-								<GraduationCap className="w-8 h-8 text-blue-500" aria-hidden="true" />
-								<h2 className="text-3xl font-bold">Education</h2>
+					{/* Certifications - Primary */}
+					<div className="flex items-center gap-3 mb-8">
+						<Award className="w-8 h-8 text-purple-500" />
+						<h2 className="text-3xl font-bold">Certifications</h2>
+					</div>
+
+					{/* Earned Certifications Grid */}
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+						<a
+							href="https://learn.microsoft.com/api/credentials/share/en-us/ahmed527/1AFCAB418BEA81F5?sharingId=46928C725D2B41FE"
+							target="_blank"
+							rel="noopener noreferrer"
+							className={`flex gap-4 p-6 rounded-2xl border group cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-lg ${darkMode ? 'bg-gradient-to-br from-slate-800 to-slate-900 border-slate-700 hover:border-blue-500/50' : 'bg-gradient-to-br from-slate-200 to-slate-100 border-slate-200 hover:border-blue-400'}`}
+						>
+							<img src="/portfolio/azure-associate-badge.svg" alt="Microsoft Certified Associate Badge" className="w-16 h-16 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
+							<div className="flex-1 min-w-0">
+								<div className="flex items-center gap-2">
+									<h3 className="font-bold text-lg group-hover:text-blue-400 transition-colors">Microsoft Certified: Azure Developer Associate</h3>
+									<ExternalLink className="w-4 h-4 text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" />
+								</div>
+								<p className={`text-sm mt-1 ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>Validation of proficiency in Azure development, cloud security, and integration.</p>
 							</div>
-							<div className="space-y-8">
-								<div className={`p-6 rounded-2xl border ${darkMode ? 'bg-slate-800/50 border-slate-700' : 'bg-slate-100 border-slate-400'}`}>
-									<h3 className="text-xl font-bold">Master's in Computer Science</h3>
-									<p className="text-blue-400 font-medium flex items-center gap-2">
-										Jackson State University
-										<img
-											src="https://flagcdn.com/24x18/us.png"
-											alt=""
-											className="w-5 h-auto object-contain inline-block"
-											loading="lazy"
-											width="24"
-											height="18"
-										/>
-									</p>
-									<div className={`flex justify-between mt-2 text-sm ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
-										<span>2019 - 2021</span>
-										<span className="font-bold text-teal-400">GPA: 4.0 / 4</span>
-									</div>
+						</a>
+
+						<a
+							href="https://learn.microsoft.com/api/credentials/share/en-us/ahmed527/100CD05B8264058F?sharingId=46928C725D2B41FE"
+							target="_blank"
+							rel="noopener noreferrer"
+							className={`flex gap-4 p-6 rounded-2xl border group cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-lg ${darkMode ? 'bg-gradient-to-br from-slate-800 to-slate-900 border-slate-700 hover:border-blue-500/50' : 'bg-gradient-to-br from-slate-200 to-slate-100 border-slate-200 hover:border-blue-400'}`}
+						>
+							<img src="/portfolio/azure-expert-badge.svg" alt="Microsoft Certified Expert Badge" className="w-16 h-16 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
+							<div className="flex-1 min-w-0">
+								<div className="flex items-center gap-2">
+									<h3 className="font-bold text-lg group-hover:text-blue-400 transition-colors">Microsoft Certified: DevOps Engineer Expert</h3>
+									<ExternalLink className="w-4 h-4 text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" />
 								</div>
-								<div className={`p-6 rounded-2xl border ${darkMode ? 'bg-slate-800/50 border-slate-700' : 'bg-slate-100 border-slate-400'}`}>
-									<h3 className="text-xl font-bold">B.Sc. Electrical & Electronics Engineering</h3>
-									<p className="text-blue-400 font-medium flex items-center gap-2">
-										University of Khartoum
-										<img
-											src="https://flagcdn.com/24x18/sd.png"
-											alt=""
-											className="w-5 h-auto object-contain inline-block"
-											loading="lazy"
-											width="24"
-											height="18"
-										/>
-									</p>
-									<div className={`flex justify-between mt-2 text-sm ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
-										<span>2008 - 2013</span>
-										<span className="font-bold text-teal-400">CGPA: 3.2 / 4</span>
-									</div>
-								</div>
+								<p className={`text-sm mt-1 ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>Expertise in DevOps practices, CI/CD pipelines, and infrastructure as code on Azure.</p>
+							</div>
+						</a>
+					</div>
+
+					{/* Currently Pursuing */}
+					<div className={`p-5 rounded-2xl border mb-16 ${darkMode ? 'bg-slate-800/30 border-slate-700/50' : 'bg-slate-50 border-slate-200'}`}>
+						<h4 className="text-sm uppercase tracking-wider font-semibold mb-3 text-slate-500">Currently Pursuing</h4>
+						<ul className="space-y-2">
+							<li className="flex items-center gap-2">
+								<div className="w-2 h-2 bg-yellow-500 rounded-full animate-pulse"></div>
+								<span>Azure AI Certification</span>
+							</li>
+						</ul>
+					</div>
+
+					{/* Education - Subsection */}
+					<div className="flex items-center gap-3 mb-8">
+						<GraduationCap className="w-7 h-7 text-blue-500" aria-hidden="true" />
+						<h3 className="text-2xl font-bold">Education</h3>
+					</div>
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+						<div className={`p-6 rounded-2xl border ${darkMode ? 'bg-slate-800/50 border-slate-700' : 'bg-slate-200 border-slate-400'}`}>
+							<h4 className="text-xl font-bold">Master's in Computer Science</h4>
+							<p className="text-blue-400 font-medium flex items-center gap-2">
+								Jackson State University
+								<img
+									src="https://flagcdn.com/24x18/us.png"
+									alt=""
+									className="w-5 h-auto object-contain inline-block"
+									loading="lazy"
+									width="24"
+									height="18"
+								/>
+							</p>
+							<div className={`flex justify-between mt-2 text-sm ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
+								<span>2019 - 2021</span>
+								<span className="font-bold text-teal-400">GPA: 4.0 / 4</span>
 							</div>
 						</div>
-
-						<div>
-							<div className="flex items-center gap-3 mb-8">
-								<Award className="w-8 h-8 text-purple-500" />
-								<h2 className="text-3xl font-bold">Certifications</h2>
-							</div>
-							<div className={`p-8 rounded-2xl border h-full ${darkMode ? 'bg-gradient-to-br from-slate-800 to-slate-900 border-slate-700' : 'bg-gradient-to-br from-white to-slate-50 border-slate-200'}`}>
-								<div className="space-y-6">
-
-									<a
-										href="https://learn.microsoft.com/api/credentials/share/en-us/ahmed527/1AFCAB418BEA81F5?sharingId=46928C725D2B41FE"
-										target="_blank"
-										rel="noopener noreferrer"
-										className="flex gap-4 group cursor-pointer hover:opacity-80 transition-opacity"
-									>
-										<img src="/portfolio/azure-associate-badge.svg" alt="Microsoft Certified Associate Badge" className="w-14 h-14 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
-										<div className="flex-1">
-											<div className="flex items-center gap-2">
-												<h3 className="font-bold text-lg group-hover:text-blue-400 transition-colors">Microsoft Certified: Azure Developer Associate</h3>
-												<ExternalLink className="w-4 h-4 text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity" />
-											</div>
-											<p className={`text-sm mt-1 ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>Validation of proficiency in Azure development, cloud security, and integration.</p>
-										</div>
-									</a>
-
-									<a
-										href="https://learn.microsoft.com/api/credentials/share/en-us/ahmed527/100CD05B8264058F?sharingId=46928C725D2B41FE"
-										target="_blank"
-										rel="noopener noreferrer"
-										className="flex gap-4 group cursor-pointer hover:opacity-80 transition-opacity"
-									>
-										<img src="/portfolio/azure-expert-badge.svg" alt="Microsoft Certified Expert Badge" className="w-14 h-14 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
-										<div className="flex-1">
-											<div className="flex items-center gap-2">
-												<h3 className="font-bold text-lg group-hover:text-blue-400 transition-colors">Microsoft Certified: DevOps Engineer Expert</h3>
-												<ExternalLink className="w-4 h-4 text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity" />
-											</div>
-											<p className={`text-sm mt-1 ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>Expertise in DevOps practices, CI/CD pipelines, and infrastructure as code on Azure.</p>
-										</div>
-									</a>
-
-									<div className="pt-6 border-t border-slate-700/50">
-										<h4 className="text-sm uppercase tracking-wider font-semibold mb-4 text-slate-500">Currently Pursuing</h4>
-										<ul className="space-y-3">
-
-											<li className="flex items-center gap-2">
-												<div className="w-2 h-2 bg-yellow-500 rounded-full animate-pulse"></div>
-												<span>Azure AI Certification</span>
-											</li>
-										</ul>
-									</div>
-								</div>
+						<div className={`p-6 rounded-2xl border ${darkMode ? 'bg-slate-800/50 border-slate-700' : 'bg-slate-200 border-slate-400'}`}>
+							<h4 className="text-xl font-bold">B.Sc. Electrical & Electronics Engineering</h4>
+							<p className="text-blue-400 font-medium flex items-center gap-2">
+								University of Khartoum
+								<img
+									src="https://flagcdn.com/24x18/sd.png"
+									alt=""
+									className="w-5 h-auto object-contain inline-block"
+									loading="lazy"
+									width="24"
+									height="18"
+								/>
+							</p>
+							<div className={`flex justify-between mt-2 text-sm ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
+								<span>2008 - 2013</span>
+								<span className="font-bold text-teal-400">CGPA: 3.2 / 4</span>
 							</div>
 						</div>
-
 					</div>
 				</section>
 
 				{/* Footer */}
-				<footer className={`py-12 px-4 border-t ${darkMode ? 'bg-slate-900 border-slate-800' : 'bg-slate-200 border-slate-400'}`}>
+				<footer className={`py-12 px-4 border-t ${darkMode ? 'bg-slate-900 border-slate-800' : 'bg-slate-300 border-slate-400'}`}>
 					<div className="max-w-[1600px] mx-auto text-center">
 						<h2 className="text-2xl font-bold mb-6">Ready to Drive Enterprise Success</h2>
 						<div className="flex justify-center gap-8 mb-8">

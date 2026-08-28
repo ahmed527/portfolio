@@ -1,1 +1,624 @@
 @import "tailwindcss";
+
+/* ==========================================================================
+   PRINT / PDF STYLES
+   Optimized specifically for high-quality, professional PDF export and printing.
+   Does not affect regular screen or mobile view in any way.
+   ========================================================================== */
+@media print {
+	@page {
+		size: letter portrait;
+		margin: 10mm 12mm;
+	}
+
+	*, *::before, *::after {
+		animation: none !important;
+		transition: none !important;
+		box-shadow: none !important;
+		text-shadow: none !important;
+	}
+
+	html, body {
+		background: #ffffff !important;
+		background-color: #ffffff !important;
+		color: #1e293b !important;
+		font-size: 11pt !important;
+		line-height: 1.4 !important;
+		-webkit-print-color-adjust: exact !important;
+		print-color-adjust: exact !important;
+	}
+
+	#root, main, div[class*="min-h-screen"] {
+		background: #ffffff !important;
+		background-color: #ffffff !important;
+		color: #1e293b !important;
+		padding: 0 !important;
+		margin: 0 !important;
+		min-height: auto !important;
+	}
+
+	/* --------------------------------------------------------------------------
+	   1. Hide Interactive & Web-Only Elements
+	   -------------------------------------------------------------------------- */
+	nav,
+	a[href="#main-content"],
+	button[aria-label="Toggle theme"],
+	button[aria-label="Toggle menu"],
+	.pointer-events-none,
+	.blur-3xl,
+	.blur-2xl,
+	.blur-xl,
+	.lucide-external-link {
+		display: none !important;
+	}
+
+	/* Prevent default browser href printing after links */
+	a:after, a[href]:after {
+		content: none !important;
+	}
+
+	/* --------------------------------------------------------------------------
+	   2. Global Typography & Colors
+	   -------------------------------------------------------------------------- */
+	h1, h2, h3, h4, h5, h6 {
+		color: #0f172a !important;
+		-webkit-text-fill-color: #0f172a !important;
+		background: none !important;
+		page-break-after: avoid !important;
+		break-after: avoid !important;
+	}
+
+	p, span, li, div {
+		color: #334155 !important;
+	}
+
+	.text-transparent {
+		-webkit-text-fill-color: #0284c7 !important;
+		color: #0284c7 !important;
+		background: none !important;
+	}
+
+	/* Section Headers */
+	section > div > div.text-center,
+	section > div.mb-16 {
+		text-align: left !important;
+		margin-bottom: 0.75rem !important;
+		page-break-after: avoid !important;
+		break-after: avoid !important;
+	}
+
+	/* Colored underline bars below section headers */
+	.w-20.h-1 {
+		margin: 0.2rem 0 0.4rem 0 !important;
+		width: 2.5rem !important;
+		height: 3px !important;
+		-webkit-print-color-adjust: exact !important;
+		print-color-adjust: exact !important;
+	}
+
+	/* --------------------------------------------------------------------------
+	   3. Hero Section
+	   -------------------------------------------------------------------------- */
+	#home {
+		padding-top: 0 !important;
+		padding-bottom: 1.25rem !important;
+		margin-bottom: 0.75rem !important;
+		border-bottom: 1px solid #e2e8f0 !important;
+		display: flex !important;
+		flex-direction: row !important;
+		align-items: stretch !important;
+		justify-content: space-between !important;
+		gap: 1.5rem !important;
+		page-break-inside: avoid !important;
+		break-inside: avoid !important;
+	}
+
+	#home > div:first-child {
+		flex: 1 1 58% !important;
+		display: flex !important;
+		flex-direction: column !important;
+		justify-content: space-between !important;
+	}
+
+	#home .inline-block.rounded-full {
+		background: #f0fdf4 !important;
+		color: #15803d !important;
+		border: 1px solid #bbf7d0 !important;
+		font-size: 0.72rem !important;
+		font-weight: 600 !important;
+		padding: 0.15rem 0.5rem !important;
+		margin-bottom: 0.35rem !important;
+		display: inline-block !important;
+		width: fit-content !important;
+		-webkit-print-color-adjust: exact !important;
+		print-color-adjust: exact !important;
+	}
+
+	#home h1 {
+		font-size: 2.1rem !important;
+		line-height: 1.15 !important;
+		margin-bottom: 0.35rem !important;
+		color: #0f172a !important;
+		font-weight: 800 !important;
+	}
+
+	#home h1 span {
+		color: #0284c7 !important;
+		-webkit-text-fill-color: #0284c7 !important;
+		background: none !important;
+	}
+
+	#home p {
+		font-size: 0.88rem !important;
+		line-height: 1.4 !important;
+		color: #334155 !important;
+	}
+
+	#home p span.text-blue-400 {
+		color: #0284c7 !important;
+	}
+
+	#home p span.text-teal-400 {
+		color: #0d9488 !important;
+	}
+
+	#home p span.text-emerald-400 {
+		color: #059669 !important;
+	}
+
+	/* Hero Contact & Action Badges */
+	#home .flex-wrap.gap-4 {
+		padding-top: 0.35rem !important;
+		gap: 0.4rem !important;
+		display: flex !important;
+	}
+
+	#home .flex-wrap.gap-4 a {
+		padding: 0.25rem 0.6rem !important;
+		font-size: 0.75rem !important;
+		border-radius: 6px !important;
+		background: #f8fafc !important;
+		color: #0f172a !important;
+		border: 1px solid #cbd5e1 !important;
+		box-shadow: none !important;
+		transform: none !important;
+		-webkit-print-color-adjust: exact !important;
+		print-color-adjust: exact !important;
+	}
+
+	#home .flex-wrap.gap-4 a svg {
+		color: #0284c7 !important;
+		width: 14px !important;
+		height: 14px !important;
+	}
+
+	#home .flex.items-center.gap-6 {
+		padding-top: 0.35rem !important;
+		color: #475569 !important;
+		font-size: 0.78rem !important;
+		gap: 1rem !important;
+	}
+
+	/* Profile Card (Right column) */
+	#home > div:last-child {
+		flex: 1 1 38% !important;
+		max-width: 320px !important;
+		margin: 0 !important;
+		display: block !important;
+	}
+
+	#home > div:last-child > div.relative {
+		aspect-ratio: auto !important;
+		padding: 0.85rem !important;
+		gap: 0.5rem !important;
+		background: #f8fafc !important;
+		border: 1px solid #cbd5e1 !important;
+		border-radius: 10px !important;
+		box-shadow: none !important;
+		display: flex !important;
+		flex-direction: column !important;
+		-webkit-print-color-adjust: exact !important;
+		print-color-adjust: exact !important;
+	}
+
+	#home .w-20.h-20 {
+		width: 2.75rem !important;
+		height: 2.75rem !important;
+		font-size: 1.1rem !important;
+		border-radius: 8px !important;
+		background: #0284c7 !important;
+		color: #ffffff !important;
+		-webkit-print-color-adjust: exact !important;
+		print-color-adjust: exact !important;
+	}
+
+	#home .border-dashed {
+		padding-bottom: 0.4rem !important;
+		gap: 0.75rem !important;
+	}
+
+	#home .border-dashed h2 {
+		font-size: 1.15rem !important;
+	}
+
+	#home .border-dashed p {
+		font-size: 0.78rem !important;
+		color: #0284c7 !important;
+		-webkit-text-fill-color: #0284c7 !important;
+	}
+
+	#home .rounded-xl {
+		background: #ffffff !important;
+		border: 1px solid #e2e8f0 !important;
+		padding: 0.35rem 0.6rem !important;
+		border-radius: 6px !important;
+		-webkit-print-color-adjust: exact !important;
+		print-color-adjust: exact !important;
+	}
+
+	#home .rounded-md {
+		background: #f1f5f9 !important;
+		color: #0369a1 !important;
+		border: 1px solid #cbd5e1 !important;
+		font-size: 0.7rem !important;
+		padding: 0.1rem 0.35rem !important;
+		-webkit-print-color-adjust: exact !important;
+		print-color-adjust: exact !important;
+	}
+
+	#home .grid-cols-3 {
+		gap: 0.4rem !important;
+		margin-top: 0.15rem !important;
+		display: grid !important;
+		grid-template-columns: repeat(3, 1fr) !important;
+	}
+
+	#home .grid-cols-3 > div {
+		padding: 0.35rem 0.2rem !important;
+		background: #ffffff !important;
+		border: 1px solid #cbd5e1 !important;
+		border-radius: 6px !important;
+		-webkit-print-color-adjust: exact !important;
+		print-color-adjust: exact !important;
+	}
+
+	#home .grid-cols-3 .text-2xl {
+		font-size: 1.05rem !important;
+		line-height: 1.2 !important;
+		color: #0284c7 !important;
+		-webkit-text-fill-color: #0284c7 !important;
+	}
+
+	#home .grid-cols-3 .text-\[9px\] {
+		font-size: 0.65rem !important;
+	}
+
+	/* --------------------------------------------------------------------------
+	   4. Skills Section
+	   -------------------------------------------------------------------------- */
+	#skills {
+		padding: 0.75rem 0 !important;
+		background: transparent !important;
+		page-break-inside: avoid !important;
+		break-inside: avoid !important;
+	}
+
+	#skills .grid {
+		grid-template-columns: repeat(4, 1fr) !important;
+		gap: 0.6rem !important;
+		display: grid !important;
+	}
+
+	#skills .rounded-2xl.border {
+		padding: 0.65rem 0.75rem !important;
+		background: #f8fafc !important;
+		border: 1px solid #cbd5e1 !important;
+		border-radius: 8px !important;
+		page-break-inside: avoid !important;
+		break-inside: avoid !important;
+		-webkit-print-color-adjust: exact !important;
+		print-color-adjust: exact !important;
+	}
+
+	#skills .w-12.h-12 {
+		width: 1.75rem !important;
+		height: 1.75rem !important;
+		margin-bottom: 0.35rem !important;
+		background: #e0f2fe !important;
+		color: #0284c7 !important;
+		border-radius: 6px !important;
+		-webkit-print-color-adjust: exact !important;
+		print-color-adjust: exact !important;
+	}
+
+	#skills .w-12.h-12 svg {
+		width: 14px !important;
+		height: 14px !important;
+	}
+
+	#skills h3 {
+		font-size: 0.88rem !important;
+		margin-bottom: 0.35rem !important;
+		color: #0f172a !important;
+	}
+
+	#skills span.rounded-md {
+		font-size: 0.68rem !important;
+		padding: 0.1rem 0.3rem !important;
+		background: #ffffff !important;
+		color: #1e293b !important;
+		border: 1px solid #cbd5e1 !important;
+		-webkit-print-color-adjust: exact !important;
+		print-color-adjust: exact !important;
+	}
+
+	/* --------------------------------------------------------------------------
+	   5. Experience Section
+	   -------------------------------------------------------------------------- */
+	#experience {
+		padding: 0.75rem 0 !important;
+		background: transparent !important;
+	}
+
+	#experience .space-y-12 {
+		display: flex !important;
+		flex-direction: column !important;
+		gap: 0.75rem !important;
+		margin-top: 0.5rem !important;
+	}
+
+	#experience .space-y-12 > div {
+		padding-left: 0 !important;
+		page-break-inside: avoid !important;
+		break-inside: avoid !important;
+	}
+
+	/* Hide timeline line and dots in print for clean document flow */
+	#experience .hidden.md\:block.absolute,
+	#experience .absolute.left-\[-37px\] {
+		display: none !important;
+	}
+
+	#experience .flex-col.md\:flex-row {
+		display: flex !important;
+		flex-direction: row !important;
+		gap: 0.75rem !important;
+	}
+
+	#experience .md\:w-\[180px\] {
+		width: 135px !important;
+		flex-shrink: 0 !important;
+		text-align: right !important;
+		padding-right: 0.75rem !important;
+		padding-top: 0.2rem !important;
+		border-right: 2px solid #cbd5e1 !important;
+	}
+
+	#experience .font-bold.text-blue-400 {
+		color: #0284c7 !important;
+		font-size: 0.8rem !important;
+	}
+
+	#experience .md\:w-\[180px\] .text-sm {
+		font-size: 0.72rem !important;
+		color: #64748b !important;
+	}
+
+	#experience .flex-1.p-6 {
+		padding: 0.6rem 0.8rem !important;
+		background: #f8fafc !important;
+		border: 1px solid #cbd5e1 !important;
+		border-radius: 8px !important;
+		-webkit-print-color-adjust: exact !important;
+		print-color-adjust: exact !important;
+	}
+
+	#experience h3 {
+		font-size: 0.92rem !important;
+		color: #0f172a !important;
+	}
+
+	#experience .text-teal-400,
+	#experience .text-teal-700 {
+		color: #0f766e !important;
+		font-size: 0.8rem !important;
+	}
+
+	#experience p.italic {
+		font-size: 0.78rem !important;
+		margin-bottom: 0.35rem !important;
+		color: #475569 !important;
+	}
+
+	#experience ul {
+		gap: 0.15rem !important;
+	}
+
+	#experience li {
+		font-size: 0.76rem !important;
+		line-height: 1.35 !important;
+		color: #334155 !important;
+	}
+
+	#experience li svg {
+		color: #0284c7 !important;
+		width: 12px !important;
+		height: 12px !important;
+		margin-top: 2px !important;
+	}
+
+	/* --------------------------------------------------------------------------
+	   6. Featured Projects Section
+	   -------------------------------------------------------------------------- */
+	#projects {
+		padding: 0.75rem 0 !important;
+		background: transparent !important;
+		break-before: page !important;
+		page-break-before: always !important;
+	}
+
+	#projects .grid {
+		grid-template-columns: repeat(2, 1fr) !important;
+		gap: 0.75rem !important;
+		display: grid !important;
+	}
+
+	#projects .group.relative {
+		background: #f8fafc !important;
+		border: 1px solid #cbd5e1 !important;
+		border-radius: 8px !important;
+		page-break-inside: avoid !important;
+		break-inside: avoid !important;
+		-webkit-print-color-adjust: exact !important;
+		print-color-adjust: exact !important;
+	}
+
+	#projects .p-8 {
+		padding: 0.7rem 0.8rem !important;
+	}
+
+	#projects h3 {
+		font-size: 0.95rem !important;
+		color: #0f172a !important;
+	}
+
+	#projects .text-sm.font-medium {
+		font-size: 0.75rem !important;
+		color: #475569 !important;
+		margin-bottom: 0.3rem !important;
+	}
+
+	#projects .text-xs.font-bold.tracking-wider {
+		background: #e0f2fe !important;
+		color: #0369a1 !important;
+		border: 1px solid #bae6fd !important;
+		font-size: 0.65rem !important;
+		padding: 0.1rem 0.35rem !important;
+		-webkit-print-color-adjust: exact !important;
+		print-color-adjust: exact !important;
+	}
+
+	#projects ul {
+		margin-bottom: 0.4rem !important;
+	}
+
+	#projects li {
+		font-size: 0.73rem !important;
+		line-height: 1.35 !important;
+		color: #334155 !important;
+	}
+
+	#projects li > div {
+		background: #0284c7 !important;
+		-webkit-print-color-adjust: exact !important;
+		print-color-adjust: exact !important;
+	}
+
+	#projects span.rounded-full {
+		font-size: 0.65rem !important;
+		padding: 0.08rem 0.35rem !important;
+		background: #ffffff !important;
+		color: #475569 !important;
+		border: 1px solid #cbd5e1 !important;
+		-webkit-print-color-adjust: exact !important;
+		print-color-adjust: exact !important;
+	}
+
+	/* --------------------------------------------------------------------------
+	   7. Certifications & Education Section
+	   -------------------------------------------------------------------------- */
+	#education {
+		padding: 0.75rem 0 !important;
+		background: transparent !important;
+	}
+
+	#education .grid {
+		grid-template-columns: repeat(2, 1fr) !important;
+		gap: 0.75rem !important;
+		display: grid !important;
+	}
+
+	#education a.rounded-2xl {
+		padding: 0.6rem 0.8rem !important;
+		background: #f8fafc !important;
+		border: 1px solid #cbd5e1 !important;
+		border-radius: 8px !important;
+		transform: none !important;
+		page-break-inside: avoid !important;
+		break-inside: avoid !important;
+		-webkit-print-color-adjust: exact !important;
+		print-color-adjust: exact !important;
+	}
+
+	#education a.rounded-2xl img {
+		width: 38px !important;
+		height: 38px !important;
+	}
+
+	#education a.rounded-2xl h3 {
+		font-size: 0.88rem !important;
+		color: #0f172a !important;
+	}
+
+	#education a.rounded-2xl p {
+		font-size: 0.73rem !important;
+		color: #475569 !important;
+	}
+
+	#education .p-5.rounded-2xl {
+		padding: 0.35rem 0.75rem !important;
+		margin-bottom: 0.85rem !important;
+		background: #f8fafc !important;
+		border: 1px solid #cbd5e1 !important;
+		border-radius: 8px !important;
+		page-break-inside: avoid !important;
+		break-inside: avoid !important;
+		-webkit-print-color-adjust: exact !important;
+		print-color-adjust: exact !important;
+	}
+
+	#education .grid.grid-cols-1.md\:grid-cols-2:last-child > div {
+		padding: 0.6rem 0.8rem !important;
+		background: #f8fafc !important;
+		border: 1px solid #cbd5e1 !important;
+		border-radius: 8px !important;
+		page-break-inside: avoid !important;
+		break-inside: avoid !important;
+		-webkit-print-color-adjust: exact !important;
+		print-color-adjust: exact !important;
+	}
+
+	#education h4 {
+		font-size: 0.88rem !important;
+		color: #0f172a !important;
+	}
+
+	/* --------------------------------------------------------------------------
+	   8. Footer
+	   -------------------------------------------------------------------------- */
+	footer {
+		padding: 0.65rem 0 !important;
+		margin-top: 0.85rem !important;
+		border-top: 1px solid #cbd5e1 !important;
+		background: transparent !important;
+		color: #64748b !important;
+		page-break-inside: avoid !important;
+		break-inside: avoid !important;
+	}
+
+	footer h2 {
+		font-size: 1rem !important;
+		margin-bottom: 0.25rem !important;
+		color: #0f172a !important;
+	}
+
+	footer .flex.justify-center.gap-8 {
+		margin-bottom: 0.25rem !important;
+		gap: 1rem !important;
+	}
+
+	footer p {
+		font-size: 0.7rem !important;
+		color: #64748b !important;
+	}
+}
