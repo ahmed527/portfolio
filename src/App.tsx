@@ -563,30 +563,24 @@ const App = () => {
 							{/* Stats Grid - Balanced and Proportional */}
 							<div className="grid grid-cols-3 gap-2 sm:gap-3 mt-4">
 								{/* Experience Stat */}
-								<div className={`relative group px-2.5 py-3 sm:px-3 sm:py-3.5 rounded-xl transition-all duration-300 hover:scale-105 ${darkMode ? 'bg-gradient-to-br from-blue-500/20 via-slate-800 to-teal-500/20' : 'bg-gradient-to-br from-blue-500/10 via-slate-100 to-teal-500/10'} border ${darkMode ? 'border-blue-500/30' : 'border-blue-400/40'}`}>
-									<div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-xl overflow-hidden">
-										<div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-teal-500/20 blur-xl"></div>
-									</div>
+								<div className={`relative group px-2 py-3 sm:px-3 sm:py-3.5 rounded-xl transition-all duration-300 hover:scale-105 ${darkMode ? 'bg-slate-800/80 border-blue-500/30' : 'bg-slate-300/80 border-blue-400/40'} border`}>
 									<div className="relative text-center">
-										<div className="text-lg sm:text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-teal-400 to-emerald-400 tracking-tight whitespace-nowrap animate-pulse">
+										<div className="text-base sm:text-lg lg:text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-teal-400 to-emerald-400 tracking-tight whitespace-nowrap animate-pulse">
 											{experienceString}
 										</div>
-										<div className={`text-[10px] sm:text-xs uppercase tracking-wider font-bold mt-1 whitespace-nowrap ${darkMode ? 'text-blue-300' : 'text-blue-600'}`}>
+										<div className={`text-[9px] sm:text-[11px] uppercase tracking-wider font-bold mt-1 whitespace-nowrap ${darkMode ? 'text-blue-300' : 'text-blue-600'}`}>
 											Experience
 										</div>
 									</div>
 								</div>
 
 								{/* Projects Stat */}
-								<div className={`relative group px-2.5 py-3 sm:px-3 sm:py-3.5 rounded-xl transition-all duration-300 hover:scale-105 ${darkMode ? 'bg-gradient-to-br from-teal-500/20 via-slate-800 to-emerald-500/20' : 'bg-gradient-to-br from-teal-500/10 via-slate-100 to-emerald-500/10'} border ${darkMode ? 'border-teal-500/30' : 'border-teal-400/40'}`}>
-									<div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-xl overflow-hidden">
-										<div className="absolute inset-0 bg-gradient-to-r from-teal-500/20 to-emerald-500/20 blur-xl"></div>
-									</div>
+								<div className={`relative group px-2 py-3 sm:px-3 sm:py-3.5 rounded-xl transition-all duration-300 hover:scale-105 ${darkMode ? 'bg-slate-800/80 border-teal-500/30' : 'bg-slate-300/80 border-teal-400/40'} border`}>
 									<div className="relative text-center">
-										<div className="text-lg sm:text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-emerald-400 whitespace-nowrap">
+										<div className="text-base sm:text-lg lg:text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-emerald-400 whitespace-nowrap">
 											6
 										</div>
-										<div className={`text-[10px] sm:text-xs uppercase tracking-wider font-bold mt-1 flex items-center justify-center gap-1 whitespace-nowrap ${darkMode ? 'text-teal-300' : 'text-teal-600'}`}>
+										<div className={`text-[9px] sm:text-[11px] uppercase tracking-wider font-bold mt-1 flex items-center justify-center gap-1 whitespace-nowrap ${darkMode ? 'text-teal-300' : 'text-teal-600'}`}>
 											Projects
 											<img
 												src="https://flagcdn.com/16x12/us.png"
@@ -601,15 +595,12 @@ const App = () => {
 								</div>
 
 								{/* GPA Stat */}
-								<div className={`relative group px-2.5 py-3 sm:px-3 sm:py-3.5 rounded-xl transition-all duration-300 hover:scale-105 ${darkMode ? 'bg-gradient-to-br from-purple-500/20 via-slate-800 to-pink-500/20' : 'bg-gradient-to-br from-purple-500/10 via-slate-100 to-pink-500/10'} border ${darkMode ? 'border-purple-500/30' : 'border-purple-400/40'}`}>
-									<div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-xl overflow-hidden">
-										<div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 blur-xl"></div>
-									</div>
+								<div className={`relative group px-2 py-3 sm:px-3 sm:py-3.5 rounded-xl transition-all duration-300 hover:scale-105 ${darkMode ? 'bg-slate-800/80 border-purple-500/30' : 'bg-slate-300/80 border-purple-400/40'} border`}>
 									<div className="relative text-center">
-										<div className="text-lg sm:text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 whitespace-nowrap">
+										<div className="text-base sm:text-lg lg:text-xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 whitespace-nowrap">
 											4.0
 										</div>
-										<div className={`text-[10px] sm:text-xs uppercase tracking-wider font-bold mt-1 flex items-center justify-center gap-1 whitespace-nowrap ${darkMode ? 'text-purple-300' : 'text-purple-600'}`}>
+										<div className={`text-[9px] sm:text-[11px] uppercase tracking-wider font-bold mt-1 flex items-center justify-center gap-1 whitespace-nowrap ${darkMode ? 'text-purple-300' : 'text-purple-600'}`}>
 											GPA
 											<img
 												src="https://flagcdn.com/16x12/us.png"
