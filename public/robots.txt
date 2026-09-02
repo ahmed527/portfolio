@@ -1,8 +1,8 @@
-# Robots.txt for Ahmed Mohammedali Portfolio
-# https://ahmed527.github.io/portfolio/
+# Robots.txt for Ahmed Mohammedali Professional Profile
+# https://ahmed527.github.io/profile/
 
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://ahmed527.github.io/portfolio/sitemap.xml
+Sitemap: https://ahmed527.github.io/profile/sitemap.xml
