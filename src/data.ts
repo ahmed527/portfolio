@@ -41,7 +41,7 @@ export const navLinks: NavLink[] = [
 export const skills: SkillCategory[] = [
 	{
 		category: "Back-End Architecture",
-		items: [".NET | 3.5 - 10", "ASP.NET MVC", "C#", "Web API", "EF Core | 4 - 10", "Microservices", "Hibernate", "RabbitMQ", "SSRS", "Backround Jobs"]
+		items: [".NET | 3.5 - 10", "ASP.NET MVC", "C#", "Web API", "EF Core | 4 - 10", "Microservices", "Hibernate", "RabbitMQ", "SSRS", "Background Jobs"]
 	},
 	{
 		category: "Front-End Development",
@@ -59,7 +59,7 @@ export const skills: SkillCategory[] = [
 
 export const experience: ExperienceEntry[] = [
 	{
-		company: "Collasys LLC (Contractor for PennDot)",
+		company: "Collasys LLC (Contractor for PennDOT)",
 		role: "Senior Full Stack .NET Developer",
 		period: "Oct 2025 – Present",
 		location: "PA",
@@ -68,7 +68,7 @@ export const experience: ExperienceEntry[] = [
 		achievements: [
 			"Develop and optimize secure, scalable web applications using .NET and Angular.",
 			"Leverage Azure services (Key Vault, Functions, Redis Cache, Storage Accounts, etc.) and integrate them with the application.",
-			"Implement user authentication using OAuth2, OIDC  and Siteminder.",
+			"Implement user authentication using OAuth2, OIDC, and SiteMinder.",
 			"Ensure WCAG 2.1 AA accessibility and compliance with state privacy regulations."
 		]
 	},
@@ -115,7 +115,7 @@ export const experience: ExperienceEntry[] = [
 		]
 	},
 	{
-		company: "Sigma Resources, (Contractor for Deloitte)",
+		company: "Sigma Resources (Contractor for Deloitte)",
 		role: ".NET Developer",
 		period: "Nov 2020 – Jan 2022",
 		location: "PA",
@@ -128,7 +128,7 @@ export const experience: ExperienceEntry[] = [
 		]
 	},
 	{
-		company: "Sigma Resources, (Contractor for Deloitte)",
+		company: "Sigma Resources (Contractor for Deloitte)",
 		role: ".NET Developer",
 		period: "Apr 2020 – Jul 2020",
 		location: "PA",
@@ -185,7 +185,7 @@ export const projects: ProjectEntry[] = [
 	{
 		title: "MATP Mileage Reimbursement",
 		fullName: "Medical Assistance Transportation Program",
-		client: "PennDOT  - State of Pennsylvania",
+		client: "PennDOT - State of Pennsylvania",
 		tech: [".NET", "Angular", "Azure", "SQL", "Azure DevOps"],
 		details: [
 			"Develop and optimize .NET and Angular applications for PennDOT Medicaid and MATP reimbursement systems, ensuring high scalability, accessibility (WCAG 2.1 AA) and secure data exchange.",
@@ -226,7 +226,7 @@ export const projects: ProjectEntry[] = [
 			"Automated deployment and testing reduced release cycles and manual errors.",
 			"Implemented Batches (Background jobs) to handle large data processing.",
 			"Implemented SSRS Reports for generating reports.",
-			"Maintained the legacy application by adding new features as per the new requirements, beside fixing issues."
+			"Maintained the legacy application by adding new features as per new requirements, while resolving bug reports."
 		]
 	},
 	{

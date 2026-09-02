@@ -20,7 +20,7 @@ const EducationSection = () => {
 					rel="noopener noreferrer"
 					className={`flex gap-4 p-6 rounded-2xl border group cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-lg ${darkMode ? 'bg-gradient-to-br from-slate-800 to-slate-900 border-slate-700 hover:border-blue-500/50' : 'bg-gradient-to-br from-slate-200 to-slate-100 border-slate-200 hover:border-blue-400'}`}
 				>
-					<img src="/portfolio/azure-associate-badge.svg" alt="Microsoft Certified Associate Badge" className="w-16 h-16 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
+					<img src={`${import.meta.env.BASE_URL}azure-associate-badge.svg`} alt="Microsoft Certified Associate Badge" className="w-16 h-16 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
 					<div className="flex-1 min-w-0">
 						<div className="flex items-center gap-2">
 							<h3 className="font-bold text-lg group-hover:text-blue-400 transition-colors">Microsoft Certified: Azure Developer Associate</h3>
@@ -36,7 +36,7 @@ const EducationSection = () => {
 					rel="noopener noreferrer"
 					className={`flex gap-4 p-6 rounded-2xl border group cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-lg ${darkMode ? 'bg-gradient-to-br from-slate-800 to-slate-900 border-slate-700 hover:border-blue-500/50' : 'bg-gradient-to-br from-slate-200 to-slate-100 border-slate-200 hover:border-blue-400'}`}
 				>
-					<img src="/portfolio/azure-expert-badge.svg" alt="Microsoft Certified Expert Badge" className="w-16 h-16 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
+					<img src={`${import.meta.env.BASE_URL}azure-expert-badge.svg`} alt="Microsoft Certified Expert Badge" className="w-16 h-16 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
 					<div className="flex-1 min-w-0">
 						<div className="flex items-center gap-2">
 							<h3 className="font-bold text-lg group-hover:text-blue-400 transition-colors">Microsoft Certified: DevOps Engineer Expert</h3>
