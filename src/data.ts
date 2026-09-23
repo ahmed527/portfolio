@@ -41,7 +41,7 @@ export const navLinks: NavLink[] = [
 export const skills: SkillCategory[] = [
 	{
 		category: "Back-End Architecture",
-		items: [".NET | 3.5 - 10", "ASP.NET MVC", "C#", "Web API", "EF Core | 4 - 10", "Microservices", "Hibernate", "RabbitMQ", "SSRS", "Background Jobs"]
+		items: [".NET | 3.5 - 10", "ASP.NET MVC", "C#", "Web API", "EF Core | 4 - 10", "Microservices", "Hibernate", "RabbitMQ", "SSRS", "Background Jobs", "Java"]
 	},
 	{
 		category: "Front-End Development",
